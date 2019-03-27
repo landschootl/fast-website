@@ -1,4 +1,5 @@
 # fast-website
+Website to present the FAST project :low_brightness:   
 
 ## Project setup
 ```
