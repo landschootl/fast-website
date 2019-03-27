@@ -5,15 +5,22 @@
     <!--</v-toolbar>-->
     <v-toolbar class="white">
       <v-toolbar-title class="headline text-uppercase">
-        <span id="title">{{title}} </span>
+        <!--<img src="../assets/logo.png" alt="Vuetify.js" height="50"/>-->
+        <v-avatar
+                :tile="tile"
+                :size="40"
+        >
+          <img src="../src/assets/logofast.png" alt="avatar">
+        </v-avatar>
+        <span id="title"> {{title}} </span>
         <span id="company-name-text" class="font-weight-light">- by {{company_name}}</span>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat>Link One</v-btn>
-        <v-btn flat>Link Two</v-btn>
-        <v-btn flat>Link Three</v-btn>
-      </v-toolbar-items>
+      <!--<v-spacer></v-spacer>-->
+      <!--<v-toolbar-items class="hidden-sm-and-down">-->
+        <!--<v-btn flat>Link One</v-btn>-->
+        <!--<v-btn flat>Link Two</v-btn>-->
+        <!--<v-btn flat>Link Three</v-btn>-->
+      <!--</v-toolbar-items>-->
     </v-toolbar>
 
     <v-content>
