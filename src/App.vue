@@ -1,28 +1,56 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <!--<v-toolbar class="white">-->
+      <!--<v-toolbar-title v-text="title"></v-toolbar-title>-->
+    <!--</v-toolbar>-->
+    <v-toolbar class="white">
+      <v-toolbar-title class="headline text-uppercase">
+        <span id="title">{{title}} </span>
+        <span id="company-name-text" class="font-weight-light">- by {{company_name}}</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn flat>Link One</v-btn>
+        <v-btn flat>Link Two</v-btn>
+        <v-btn flat>Link Three</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+
+    <v-content>
+      <Home/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './components/Home'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
+    Home
+  },
+  data () {
+    return {
+      title: "PROJET FAST",
+      company_name: "davidson consulting"
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: white;
+  }
+  #company-name-text {
+    font-weight: 200;
+    font-size: 20px;
+  }
+  #title {
+    font-weight: 600;
+  }
 </style>
