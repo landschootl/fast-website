@@ -38,7 +38,7 @@
         >
           <v-flex xs12 sm4 class="my-3">
             <div class="text-xs-center">
-              <h2 class="headline">En quoi consiste le projet ?</h2>
+              <h2 class="headline">Nos domaines !</h2>
               <span class="subheading">
                 (Formation Audit Speaker Tribe)
               </span>
@@ -109,7 +109,7 @@
         <v-parallax :src="require('@/assets/cover2.jpg')" height="380">
           <v-layout column align-center justify-center>
             <div class="headline white--text mb-3 text-xs-center" style="font-size: 30px;">Vous avez un besoin ?</div>
-            <em style="font-size: 19px;">N'hésitez pas à venir discuter avec nous !</em>
+            <em style="font-size: 19px;">Venez discuter avec nous !</em>
             <!--<v-btn-->
                     <!--class="blue lighten-2 mt-5"-->
                     <!--dark-->
@@ -148,7 +148,7 @@
             <v-flex xs12 sm4 offset-sm1>
               <v-card class="elevation-0 transparent">
                 <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Comment nous contacter ?</div>
+                  <div class="headline">Nous contacter ?</div>
                 </v-card-title>
                 <v-card-text>
                   Notre agence est situé dans la région Lilloise.
