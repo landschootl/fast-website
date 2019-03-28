@@ -6,79 +6,7 @@
       </section>
 
       <section>
-        <v-layout
-                column
-                wrap
-                class="my-5"
-                align-center
-        >
-          <v-flex xs12 sm4 class="my-3">
-            <div class="text-xs-center">
-              <h2 class="headline">Nos domaines !</h2>
-              <span class="subheading">
-                (Formation Audit Speaker Tribe)
-              </span>
-            </div>
-          </v-flex>
-          <v-flex xs12>
-            <v-container grid-list-xl>
-              <v-layout row wrap align-center>
-                <v-flex xs12 md3>
-                  <v-card class="elevation-0 transparent">
-                    <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">tab</v-icon>
-                    </v-card-text>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-xs-center">Formation</div>
-                    </v-card-title>
-                    <v-card-text>
-                      Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md3>
-                  <v-card class="elevation-0 transparent">
-                    <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">how_to_reg</v-icon>
-                    </v-card-text>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline">Audit</div>
-                    </v-card-title>
-                    <v-card-text>
-                      Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md3>
-                  <v-card class="elevation-0 transparent">
-                    <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">mic</v-icon>
-                    </v-card-text>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-xs-center">Speaker</div>
-                    </v-card-title>
-                    <v-card-text>
-                      Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md3>
-                  <v-card class="elevation-0 transparent">
-                    <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">public</v-icon>
-                    </v-card-text>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-xs-center">Tribe</div>
-                    </v-card-title>
-                    <v-card-text>
-                      Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-flex>
-        </v-layout>
+        <Catalog/>
       </section>
 
       <section>
@@ -86,14 +14,9 @@
           <v-layout column align-center justify-center>
             <div class="headline white--text mb-3 text-xs-center" style="font-size: 30px;">Vous avez un besoin ?</div>
             <em style="font-size: 19px;">Venez discuter avec nous !</em>
-            <!--<v-btn-->
-                    <!--class="blue lighten-2 mt-5"-->
-                    <!--dark-->
-                    <!--large-->
-                    <!--href="/pre-made-themes"-->
-            <!--&gt;-->
-              <!--Get Started-->
-            <!--</v-btn>-->
+            <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">
+              Demander une mise en relation
+            </v-btn>
           </v-layout>
         </v-parallax>
       </section>
@@ -163,27 +86,19 @@
         </v-container>
       </section>
 
-      <v-footer class="blue darken-2">
-        <v-layout row wrap align-center>
-          <v-flex xs12>
-            <div class="white--text ml-3">
-              Made with
-              <v-icon class="red--text">favorite</v-icon>
-              by <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a>
-            </div>
-          </v-flex>
-        </v-layout>
-      </v-footer>
+
     </v-content>
   </v-app>
 </template>
 
 <script>
     import Cover from "./Cover";
+    import Catalog from "./Catalog";
 
     export default {
         name: "Home",
         components: {
+            Catalog,
             Cover
         },
         data: () => ({

@@ -1,0 +1,80 @@
+<template>
+    <v-layout column wrap class="my-5" align-center>
+        <v-flex xs12 sm4 class="my-3">
+            <div class="text-xs-center">
+                <h2 class="headline">Nos domaines !</h2>
+                <span class="subheading">
+                (Formation Audit Speaker Tribe)
+              </span>
+            </div>
+        </v-flex>
+        <v-flex xs12>
+            <v-container grid-list-xl>
+                <v-layout row wrap align-center>
+                    <v-flex xs12 md3>
+                        <v-card class="elevation-0 transparent">
+                            <v-card-text class="text-xs-center">
+                                <v-icon x-large class="blue--text text--lighten-2">tab</v-icon>
+                            </v-card-text>
+                            <v-card-title primary-title class="layout justify-center">
+                                <div class="headline text-xs-center">Formation</div>
+                            </v-card-title>
+                            <v-card-text>
+                                Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
+                            </v-card-text>
+                        </v-card>
+                    </v-flex>
+                    <v-flex xs12 md3>
+                        <v-card class="elevation-0 transparent">
+                            <v-card-text class="text-xs-center">
+                                <v-icon x-large class="blue--text text--lighten-2">how_to_reg</v-icon>
+                            </v-card-text>
+                            <v-card-title primary-title class="layout justify-center">
+                                <div class="headline">Audit</div>
+                            </v-card-title>
+                            <v-card-text>
+                                Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
+                            </v-card-text>
+                        </v-card>
+                    </v-flex>
+                    <v-flex xs12 md3>
+                        <v-card class="elevation-0 transparent">
+                            <v-card-text class="text-xs-center">
+                                <v-icon x-large class="blue--text text--lighten-2">mic</v-icon>
+                            </v-card-text>
+                            <v-card-title primary-title class="layout justify-center">
+                                <div class="headline text-xs-center">Speaker</div>
+                            </v-card-title>
+                            <v-card-text>
+                                Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
+                            </v-card-text>
+                        </v-card>
+                    </v-flex>
+                    <v-flex xs12 md3>
+                        <v-card class="elevation-0 transparent">
+                            <v-card-text class="text-xs-center">
+                                <v-icon x-large class="blue--text text--lighten-2">public</v-icon>
+                            </v-card-text>
+                            <v-card-title primary-title class="layout justify-center">
+                                <div class="headline text-xs-center">Tribe</div>
+                            </v-card-title>
+                            <v-card-text>
+                                Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
+                            </v-card-text>
+                        </v-card>
+                    </v-flex>
+                </v-layout>
+            </v-container>
+        </v-flex>
+    </v-layout>
+</template>
+
+<script>
+    export default {
+        name: "Catalog"
+    }
+</script>
+
+<style scoped>
+
+</style>
