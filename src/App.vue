@@ -8,21 +8,21 @@
 </template>
 
 <script>
-import Home from './components/Home'
-import Header from "./components/Header";
+  import Home from './components/Home'
+  import Header from "./components/Header";
 
-export default {
-  name: 'App',
-  components: {
-      Header,
-      Home
-  },
-  data () {
-    return {
+  export default {
+    name: 'App',
+    components: {
+        Header,
+        Home
+    },
+    data () {
+      return {
 
+      }
     }
   }
-}
 </script>
 
 <style>
