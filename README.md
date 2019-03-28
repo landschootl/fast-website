@@ -1,5 +1,7 @@
 # fast-website
 Website to present the FAST project :low_brightness:   
+   
+[![Build Status](https://travis-ci.org/landschootl/fast-website.svg?branch=master)](https://travis-ci.org/landschootl/fast-website)
 
 ## Project setup
 ```
