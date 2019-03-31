@@ -2,9 +2,9 @@
     <v-layout column wrap class="my-5" align-center>
         <v-flex xs12 sm4 class="my-3">
             <div class="text-xs-center">
-                <h2 class="headline">Nos domaines !</h2>
+                <h2 class="headline">Nos formations !</h2>
                 <span class="subheading">
-                (Formation Audit Speaker Tribe)
+                    Un savoir-faire diversifié
               </span>
             </div>
         </v-flex>
@@ -17,10 +17,10 @@
                                 <v-icon x-large class="blue--text text--lighten-2">tab</v-icon>
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
-                                <div class="headline text-xs-center">Formation</div>
+                                <div class="headline text-xs-center">BLABLA</div>
                             </v-card-title>
                             <v-card-text>
-                                Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
+                                Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
                             </v-card-text>
                         </v-card>
                     </v-flex>
@@ -30,10 +30,10 @@
                                 <v-icon x-large class="blue--text text--lighten-2">how_to_reg</v-icon>
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
-                                <div class="headline">Audit</div>
+                                <div class="headline">BLABLA</div>
                             </v-card-title>
                             <v-card-text>
-                                Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
+                                Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
                             </v-card-text>
                         </v-card>
                     </v-flex>
@@ -43,10 +43,10 @@
                                 <v-icon x-large class="blue--text text--lighten-2">mic</v-icon>
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
-                                <div class="headline text-xs-center">Speaker</div>
+                                <div class="headline text-xs-center">BLABLA</div>
                             </v-card-title>
                             <v-card-text>
-                                Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
+                                Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
                             </v-card-text>
                         </v-card>
                     </v-flex>
@@ -56,10 +56,10 @@
                                 <v-icon x-large class="blue--text text--lighten-2">public</v-icon>
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
-                                <div class="headline text-xs-center">Tribe</div>
+                                <div class="headline text-xs-center">BLABLA</div>
                             </v-card-title>
                             <v-card-text>
-                                Description Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
+                                Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
                             </v-card-text>
                         </v-card>
                     </v-flex>
