@@ -15,7 +15,7 @@
         name: "Header",
         data: () => ({
             title: "PROJET FAST",
-            company_name: "davidson consulting"
+            company_name: "davidson"
         })
     }
 </script>
