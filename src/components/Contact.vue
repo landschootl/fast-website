@@ -35,7 +35,7 @@
                                 <v-icon class="blue--text text--lighten-2">phone</v-icon>
                             </v-list-tile-action>
                             <v-list-tile-content>
-                                <v-list-tile-title>+33 (0)3.66.72.89.24</v-list-tile-title>
+                                <v-list-tile-title>{{phone}}</v-list-tile-title>
                             </v-list-tile-content>
                         </v-list-tile>
                         <v-list-tile>
@@ -43,9 +43,7 @@
                                 <v-icon class="blue--text text--lighten-2">place</v-icon>
                             </v-list-tile-action>
                             <v-list-tile-content>
-                                <v-list-tile-title>
-                                    12, place Saint Hubert, 59000 Lille
-                                </v-list-tile-title>
+                                <v-list-tile-title>{{place}}</v-list-tile-title>
                             </v-list-tile-content>
                         </v-list-tile>
                         <v-list-tile>
@@ -53,7 +51,7 @@
                                 <v-icon class="blue--text text--lighten-2">email</v-icon>
                             </v-list-tile-action>
                             <v-list-tile-content>
-                                <v-list-tile-title>remi.lejeune@davidson.fr</v-list-tile-title>
+                                <v-list-tile-title>{{email}}</v-list-tile-title>
                             </v-list-tile-content>
                         </v-list-tile>
                     </v-list>
@@ -65,7 +63,12 @@
 
 <script>
     export default {
-        name: "Contact"
+        name: "Contact",
+        data: () => ({
+            phone: "06.08.15.37.35 - Sansen Kevin",
+            place: "12, place Saint Hubert, 59000 Lille",
+            email: "fast@davidson.fr"
+        })
     }
 </script>
 
