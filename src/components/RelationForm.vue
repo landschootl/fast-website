@@ -84,11 +84,22 @@
 </template>
 
 <script>
+    import DomainService from '../services/domain.service';
+
     export default {
         name: "RelationForm",
+        created() {
+            // CatalogService.getAll().then((response) => {
+            //     throw new Error(response.data);
+            // }).catch((error) => {
+            //     throw new Error(error.response.data);
+            // });
+            this.domains = DomainService.getAll();
+        },
         data: () => ({
             e1: 0,
-            dialog: false
+            dialog: false,
+            domains: []
         })
     }
 </script>

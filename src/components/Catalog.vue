@@ -11,55 +11,18 @@
         <v-flex xs12>
             <v-container grid-list-xl>
                 <v-layout row wrap align-center>
-                    <v-flex xs12 md3>
+                    <v-flex xs12 md3 v-for="domain in domains">
                         <v-card class="elevation-0 transparent">
                             <v-card-text class="text-xs-center">
-                                <v-icon x-large class="blue--text text--lighten-2">tab</v-icon>
+                                <v-icon x-large class="blue--text text--lighten-2">{{domain.icon}}</v-icon>
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
-                                <div class="headline text-xs-center">BLABLA</div>
+                                <div class="headline">{{domain.name}}</div>
                             </v-card-title>
                             <v-card-text>
-                                Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
-                            </v-card-text>
-                        </v-card>
-                    </v-flex>
-                    <v-flex xs12 md3>
-                        <v-card class="elevation-0 transparent">
-                            <v-card-text class="text-xs-center">
-                                <v-icon x-large class="blue--text text--lighten-2">how_to_reg</v-icon>
-                            </v-card-text>
-                            <v-card-title primary-title class="layout justify-center">
-                                <div class="headline">BLABLA</div>
-                            </v-card-title>
-                            <v-card-text>
-                                Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
-                            </v-card-text>
-                        </v-card>
-                    </v-flex>
-                    <v-flex xs12 md3>
-                        <v-card class="elevation-0 transparent">
-                            <v-card-text class="text-xs-center">
-                                <v-icon x-large class="blue--text text--lighten-2">mic</v-icon>
-                            </v-card-text>
-                            <v-card-title primary-title class="layout justify-center">
-                                <div class="headline text-xs-center">BLABLA</div>
-                            </v-card-title>
-                            <v-card-text>
-                                Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
-                            </v-card-text>
-                        </v-card>
-                    </v-flex>
-                    <v-flex xs12 md3>
-                        <v-card class="elevation-0 transparent">
-                            <v-card-text class="text-xs-center">
-                                <v-icon x-large class="blue--text text--lighten-2">public</v-icon>
-                            </v-card-text>
-                            <v-card-title primary-title class="layout justify-center">
-                                <div class="headline text-xs-center">BLABLA</div>
-                            </v-card-title>
-                            <v-card-text>
-                                Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla
+                                <ul>
+                                    <li v-for="skill in domain.skills">{{skill.name}}</li>
+                                </ul>
                             </v-card-text>
                         </v-card>
                     </v-flex>
@@ -70,8 +33,21 @@
 </template>
 
 <script>
+    import DomainService from '../services/domain.service';
+
     export default {
-        name: "Catalog"
+        name: "Catalog",
+        created() {
+            // CatalogService.getAll().then((response) => {
+            //     throw new Error(response.data);
+            // }).catch((error) => {
+            //     throw new Error(error.response.data);
+            // });
+            this.domains = DomainService.getAll();
+        },
+        data: () => ({
+            domains: []
+        })
     }
 </script>
 

@@ -21,5 +21,11 @@
 </script>
 
 <style scoped>
-
+    #company-name-text {
+        font-weight: 200;
+        font-size: 20px;
+    }
+    #title {
+        font-weight: 600;
+    }
 </style>
