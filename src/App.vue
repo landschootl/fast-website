@@ -2,14 +2,13 @@
   <v-app id="app">
     <Header/>
     <v-content>
-      <Home/>
+      <router-view></router-view>
     </v-content>
     <Footer/>
   </v-app>
 </template>
 
 <script>
-  import Home from './components/Home'
   import Header from "./components/Header";
   import Footer from "./components/Footer";
 
@@ -17,7 +16,6 @@
     name: 'App',
     components: {
         Header,
-        Home,
         Footer
     },
     data () {

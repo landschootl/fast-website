@@ -9,7 +9,8 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items>
-            <v-btn flat>Blog</v-btn>
+            <v-btn v-if="!$route.path.includes('blog')" to="/blog" flat>Blog</v-btn>
+            <v-btn v-else to="/home" flat>Home</v-btn>
         </v-toolbar-items>
     </v-toolbar>
 </template>
