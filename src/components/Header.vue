@@ -1,12 +1,16 @@
 <template>
     <v-toolbar class="white">
         <v-toolbar-title class="headline text-uppercase">
-            <v-avatar :tile="tile" :size="40">
+            <v-avatar :size="40">
                 <img src="../assets/logofast.png" alt="avatar">
             </v-avatar>
             <span id="title"> {{title}} </span>
-            <span id="company-name-text" class="font-weight-light">- by {{company_name}}</span>
+            <span id="company-name-text" class="font-weight-light">- {{company_name}}</span>
         </v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items>
+            <v-btn flat>Blog</v-btn>
+        </v-toolbar-items>
     </v-toolbar>
 </template>
 
@@ -14,7 +18,7 @@
     export default {
         name: "Header",
         data: () => ({
-            title: "PROJET FAST",
+            title: "FAST",
             company_name: "davidson"
         })
     }
