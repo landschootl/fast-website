@@ -11,7 +11,7 @@
         <v-flex xs12>
             <v-container grid-list-xl>
                 <v-layout row wrap align-center>
-                    <v-flex xs12 md3 v-for="domain in domains">
+                    <v-flex xs12 md3 v-for="(domain, index) in domains" :key="index">
                         <v-card class="elevation-0 transparent">
                             <v-card-text class="text-xs-center">
                                 <v-icon x-large class="blue--text text--lighten-2">{{domain.icon}}</v-icon>
@@ -21,7 +21,7 @@
                             </v-card-title>
                             <v-card-text>
                                 <ul>
-                                    <li v-for="skill in domain.skills">{{skill.name}}</li>
+                                    <li v-for="(skill, index) in domain.skills" :key="index">{{skill.name}}</li>
                                 </ul>
                             </v-card-text>
                         </v-card>
