@@ -2,15 +2,15 @@
     <v-layout column wrap class="my-1">
         <v-flex id="id_title" xs12 sm4 class="my-3">
             <div class="text-xs-center">
-                <h2 class="headline">FORMATIONS & AUDIT</h2>
+                <h2 class="headline">FORMATIONS & AUDITS</h2>
                 <span class="subheading">
                     Un savoir-faire diversifié
                 </span>
             </div>
         </v-flex>
         <v-flex xs12>
-            <v-container>
-                <v-layout align-top>
+            <v-container grid-list-xl>
+                <v-layout  row wrap justify-center align-top>
                     <v-flex id="column" xs12 md3 v-for="(domain, index) in domains" :key="index">
                         <v-card class="elevation-0 transparent">
                             <v-card-text class="text-xs-center">
@@ -48,7 +48,11 @@
             // }).catch((error) => {
             //     throw new Error(error.response.data);
             // });
-            this.domains = DomainService.getAll();
+            DomainService.getAll().then((response) => {
+                console.log((response))
+                this.domains = response;
+            })
+            //this.domains = DomainService.getAll();
         },
         data: () => ({
             domains: []
@@ -58,9 +62,10 @@
 
 <style scoped>
 
-    #column:nth-child(odd){
+   /* #column:nth-child(odd){
         background: #F0F0F0;
     }
+    */
 
     #id_domain {
         color: #15BFAB;
@@ -91,7 +96,7 @@
         margin-right: auto;
         height: 3px;
         border-style: solid;
-        border-width: 1.5px;
+        border-width: 1.75px;
     }
 
     ul {
