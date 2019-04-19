@@ -67,7 +67,6 @@
                 console.log((response))
                 this.domains = response;
             }) **/
-
         },
         data: () => ({
             domains: []
