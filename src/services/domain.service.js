@@ -19,6 +19,5 @@ export default {
                 return data;
            })*/
 
-
     }
 };
