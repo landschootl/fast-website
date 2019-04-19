@@ -17,5 +17,6 @@ export default {
             .then((data) => {
                 return data;
            })*/
+
     }
 };
