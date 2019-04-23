@@ -31,7 +31,6 @@
                                                 {{skill.title}}
 
                                             </li>
-
                                         </ul>
                                     </li>
                                 </ul>
