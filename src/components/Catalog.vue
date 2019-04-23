@@ -30,6 +30,7 @@
                                             <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
                                                 <input type="checkbox" id="checkbox" v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill">
                                                 {{skill.title}}
+
                                             </li>
                                         </ul>
                                     </li>
