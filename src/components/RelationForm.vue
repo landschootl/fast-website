@@ -51,13 +51,14 @@
     import FormService from '../services/form.service';
     import ApiService from '../services/api.service';
 
+
+
     export default {
         name: "RelationForm",
         components : {
             Catalog,
             Formulary,
             Recap
-
         },
         created() {
             this.registration = FormService.registration;
@@ -89,7 +90,7 @@
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-    
+
     #btn_clear {
         right: 0px;
         position: absolute;
