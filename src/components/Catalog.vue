@@ -26,6 +26,7 @@
                                 <ul>
                                     <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
+<<<<<<< HEAD
                                             <li>
                                                 <input type="checkbox" id="checkbox" v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill">
                                                 {{skill.title}}
@@ -33,6 +34,12 @@
 
                                             </li>
 
+=======
+                                            <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
+                                                <input v-if="showCheckbox" type="checkbox" name="{{skill.title}}" value="{{skill.title}}">
+                                                {{skill.title}}
+                                            </li>
+>>>>>>> refactor(relationForm): adding catalog
                                         </ul>
                                     </li>
                                 </ul>
