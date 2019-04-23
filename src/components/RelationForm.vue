@@ -25,7 +25,6 @@
                                             v-bind:showCheckbox="true"
                                             v-on:next="nextstep"/>
                                 </v-stepper-content>
-
                                 <v-stepper-content step="2">
                                     <Formulary v-on:next="nextstep"/>
                                     <v-btn color="blue darken-1" flat @click="step = 1">Retour</v-btn>
@@ -52,13 +51,14 @@
     import FormService from '../services/form.service';
     import ApiService from '../services/api.service';
 
+
+
     export default {
         name: "RelationForm",
         components : {
             Catalog,
             Formulary,
             Recap
-
         },
         created() {
             this.registration = FormService.registration;
@@ -90,7 +90,7 @@
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-    
+
     #btn_clear {
         right: 0px;
         position: absolute;
