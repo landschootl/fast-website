@@ -28,6 +28,7 @@
                                                 <input v-if="showCheckbox" type="checkbox" name="{{skill.title}}" value="{{skill.title}}">
                                                 {{skill.title}}
                                             </li>
+
                                         </ul>
                                     </li>
                                 </ul>
@@ -57,15 +58,16 @@
             this.domains = DomainService.getAll();
         },
         data: () => ({
-            domains: []
+            domains: [],
+            showCheckbox: null
         })
     }
 </script>
 
 <style scoped>
 
-    #column:nth-child(odd){
-        background: #F0F0F0;
+    #showCheckbox{
+        display: none;
     }
 
     #id_domain {
