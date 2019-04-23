@@ -19,18 +19,21 @@
 
                         <v-stepper-items>
                             <v-stepper-content step="1">
-                                <v-card class="mb-5 no-border" color="lighten-1" height="200px"></v-card>
+                              <Catalog/>
                                 <v-btn color="primary" @click="e1 = 2">Continue</v-btn>
+                                <v-btn id="id_close_btn" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
                             </v-stepper-content>
 
                             <v-stepper-content step="2">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
                                 <v-btn color="primary" @click="e1 = 3">Continue</v-btn>
+                                <v-btn id="id_close_btn" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
                             </v-stepper-content>
 
                             <v-stepper-content step="3">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
                                 <v-btn color="primary" @click="e1 = 1">Envoyer</v-btn>
+                                <v-btn id="id_close_btn" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
                             </v-stepper-content>
                         </v-stepper-items>
                     </v-stepper>
@@ -76,7 +79,7 @@
                 </v-card-text>
                 <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="blue darken-1" flat @click="dialog = false">Close</v-btn>
+
 <!--                    <v-btn color="blue darken-1" flat @click="dialog = false">Save</v-btn>-->
                 </v-card-actions>
             </v-card>
@@ -85,9 +88,13 @@
 
 <script>
     import DomainService from '../services/domain.service';
+    import Catalog from './Catalog'
 
     export default {
         name: "RelationForm",
+        components : {
+            Catalog
+        },
         created() {
             // CatalogService.getAll().then((response) => {
             //     throw new Error(response.data);
@@ -99,7 +106,8 @@
         data: () => ({
             e1: 0,
             dialog: false,
-            domains: []
+            domains: [],
+            showCheckbox: true
         })
     }
 </script>
@@ -108,5 +116,14 @@
     .no-border {
         -webkit-box-shadow: none;
         box-shadow: none;
+    }
+
+    #id_close_btn {
+        right: 0px;
+        position: absolute;
+    }
+
+    #showCheckbox {
+        display: inline-block;
     }
 </style>
