@@ -55,7 +55,6 @@
                 console.log((response))
                 this.domains = response;
             })
-            //this.domains = DomainService.getAll();
         },
         data: () => ({
             domains: []
