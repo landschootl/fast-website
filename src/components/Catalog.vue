@@ -58,7 +58,6 @@
                 console.log((response))
                 this.domains = response;
             })
-            //this.domains = DomainService.getAll();
         },
         data: () => ({
             domains: []
@@ -67,11 +66,6 @@
 </script>
 
 <style scoped>
-
-   /* #column:nth-child(odd){
-        background: #F0F0F0;
-    }
-    */
 
     #id_domain {
         color: #15BFAB;
