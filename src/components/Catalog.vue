@@ -30,6 +30,7 @@
                                                 <input v-if="showCheckbox" type="checkbox" name="{{skill.title}}" value="{{skill.title}}">
                                                 {{skill.title}}
                                             </li>
+
                                         </ul>
                                     </li>
                                 </ul>
