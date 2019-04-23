@@ -24,6 +24,7 @@
 
                                 <v-card class="mb-5 no-border" color="lighten-1" height="200px"></v-card>
 
+
                             </v-stepper-content>
 
                             <v-stepper-content step="2">
@@ -41,6 +42,7 @@
                 </v-card-text>
                 <v-card-actions>
                     <v-spacer></v-spacer>
+
                 </v-card-actions>
             </v-card>
         </v-dialog>
@@ -51,11 +53,13 @@
     import Catalog from './Catalog'
     import Formulary from "./Formulary";
 
+
     export default {
         name: "RelationForm",
         components : {
             Catalog,
             Formulary
+
         },
         created() {
             // CatalogService.getAll().then((response) => {
@@ -68,7 +72,8 @@
         data: () => ({
             step_panel: 0,
             dialog: false,
-            domains: []
+            domains: [],
+            showCheckbox: true
         })
     }
 </script>
@@ -78,9 +83,14 @@
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-
-    #id_close_btn, #id_close_btn2, #id_close_btn3 {
+    
+    #id_close_btn {
         right: 0px;
         position: absolute;
     }
+
+    #showCheckbox {
+        display: inline-block;
+    }
+>>>>>>> refactor(relationForm): adding catalog
 </style>
