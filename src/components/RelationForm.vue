@@ -27,13 +27,13 @@
                             <v-stepper-content step="2">
                                 <Formulary/>
                                 <v-btn color="primary" @click="e1 = 3">Continue</v-btn>
-                                <v-btn id="id_close_btn2" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
+
                             </v-stepper-content>
 
                             <v-stepper-content step="3">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
                                 <v-btn color="primary" @click="e1 = 1">Envoyer</v-btn>
-                                <v-btn id="id_close_btn3" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
+
                             </v-stepper-content>
                         </v-stepper-items>
                     </v-stepper>
@@ -88,7 +88,7 @@
 
 <script>
     import DomainService from '../services/domain.service';
-    import Catalog from './Catalog'
+    import Catalog from './Catalog';
     import Formulary from "./Formulary";
 
     export default {
@@ -108,7 +108,8 @@
         data: () => ({
             e1: 0,
             dialog: false,
-            domains: []
+            domains: [],
+            showCheckbox: true
         })
     }
 </script>
@@ -119,8 +120,13 @@
         box-shadow: none;
     }
 
-    #id_close_btn, #id_close_btn2, #id_close_btn3 {
+    #id_close_btn {
         right: 0px;
         position: absolute;
     }
+
+    #showCheckbox {
+        display: inline-block;
+    }
+
 </style>
