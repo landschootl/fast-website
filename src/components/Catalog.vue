@@ -27,9 +27,6 @@
                                         <ul>
                                             <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
 
-                                                {{skill.title}}
-
-                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -64,13 +61,13 @@
         },
         
         data: () => ({
-            domains: []
+            domains: [],
+            showCheckbox: null
         })
     }
 </script>
 
 <style scoped>
-
     #column {
         margin-top: -6.3%;
         padding-top: 7%;
