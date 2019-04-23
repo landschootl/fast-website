@@ -50,7 +50,7 @@
             showCheckbox: Boolean
         },
         created() {
-            
+
         },
         data: () => ({
             domains: []
