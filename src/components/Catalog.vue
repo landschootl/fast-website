@@ -72,7 +72,7 @@
 </script>
 
 <style scoped>
-    
+
     #id_domain {
         color: #15BFAB;
     }
