@@ -27,13 +27,21 @@
                             <v-stepper-content step="2">
                                 <Formulary/>
                                 <v-btn color="primary" @click="e1 = 3">Continue</v-btn>
+<<<<<<< HEAD
                                 <v-btn id="id_close_btn2" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
+=======
+                                <v-btn id="id_close_btn" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
+>>>>>>> refactor(relationForm): adding catalog
                             </v-stepper-content>
 
                             <v-stepper-content step="3">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
                                 <v-btn color="primary" @click="e1 = 1">Envoyer</v-btn>
+<<<<<<< HEAD
                                 <v-btn id="id_close_btn3" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
+=======
+                                <v-btn id="id_close_btn" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
+>>>>>>> refactor(relationForm): adding catalog
                             </v-stepper-content>
                         </v-stepper-items>
                     </v-stepper>
@@ -89,13 +97,20 @@
 <script>
     import DomainService from '../services/domain.service';
     import Catalog from './Catalog'
+<<<<<<< HEAD
     import Formulary from "./Formulary";
+=======
+>>>>>>> refactor(relationForm): adding catalog
 
     export default {
         name: "RelationForm",
         components : {
+<<<<<<< HEAD
             Catalog,
             Formulary
+=======
+            Catalog
+>>>>>>> refactor(relationForm): adding catalog
         },
         created() {
             // CatalogService.getAll().then((response) => {
@@ -108,7 +123,8 @@
         data: () => ({
             e1: 0,
             dialog: false,
-            domains: []
+            domains: [],
+            showCheckbox: true
         })
     }
 </script>
@@ -119,8 +135,19 @@
         box-shadow: none;
     }
 
+<<<<<<< HEAD
     #id_close_btn, #id_close_btn2, #id_close_btn3 {
         right: 0px;
         position: absolute;
     }
+=======
+    #id_close_btn {
+        right: 0px;
+        position: absolute;
+    }
+
+    #showCheckbox {
+        display: inline-block;
+    }
+>>>>>>> refactor(relationForm): adding catalog
 </style>
