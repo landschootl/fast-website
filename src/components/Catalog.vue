@@ -26,7 +26,11 @@
                                     <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
                                             <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
+<<<<<<< HEAD
 
+=======
+                                                <input id="showCheckbox" type="checkbox" name="{{skill.title}}" value="{{skill.title}}">
+>>>>>>> refactor(catalog): add checkbox
                                                 {{skill.title}}
                                             </li>
                                         </ul>
@@ -83,6 +87,10 @@
     #id_subdomain {
         font-weight: bold;
         padding-top: 20px;
+    }
+
+    #showCheckbox {
+        display: inline-block;
     }
 
     hr {
