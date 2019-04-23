@@ -30,6 +30,7 @@
                                                 <input id="showCheckbox" type="checkbox" name="{{skill.title}}" value="{{skill.title}}">
                                                 {{skill.title}}</li>
 
+
                                         </ul>
                                     </li>
                                 </ul>
@@ -80,7 +81,6 @@
     #column:nth-child(odd) {
         background-color: rgba(238, 240, 239, 0.5);
     }
-
 
     #id_card {
         z-index: 2 !important;
