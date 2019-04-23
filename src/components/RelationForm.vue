@@ -51,7 +51,6 @@
     import FormService from '../services/form.service';
     import ApiService from '../services/api.service';
 
-
     export default {
         name: "RelationForm",
         components : {
@@ -94,5 +93,4 @@
         position: absolute;
         z-index: 1;
     }
-
 </style>
