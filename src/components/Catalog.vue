@@ -57,7 +57,6 @@
             DomainService.getAll().then((response) => {
                 console.log((response))
                 this.domains = response;
-<<<<<<< HEAD
             }) **/
         },
         data: () => ({
@@ -87,6 +86,10 @@
     #id_subdomain {
         font-weight: bold;
         padding-top: 20px;
+    }
+
+    #showCheckbox {
+        display: inline-block;
     }
 
     hr {
