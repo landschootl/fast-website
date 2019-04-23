@@ -63,6 +63,7 @@
             DomainService.getAll().then((response) => {
                 console.log((response))
                 this.domains = response;
+<<<<<<< HEAD
             }) **/
 
         },
@@ -74,14 +75,6 @@
 
 <style scoped>
 
-<<<<<<< HEAD
-=======
-   /* #column:nth-child(odd){
-        background: #F0F0F0;
-    }
-    */
-
->>>>>>> refactor(catalog): responsive catalog
     #id_domain {
         color: #15BFAB;
     }
