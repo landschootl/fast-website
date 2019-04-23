@@ -20,17 +20,23 @@
                         <v-stepper-items>
                             <v-stepper-content step="1">
 
+
                                 <v-card class="mb-5 no-border" color="lighten-1" height="200px"></v-card>
+
 
                             </v-stepper-content>
 
                             <v-stepper-content step="2">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
 
+
+
                             </v-stepper-content>
 
                             <v-stepper-content step="3">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
+
+
 
                             </v-stepper-content>
                         </v-stepper-items>
@@ -38,6 +44,7 @@
                 </v-card-text>
                 <v-card-actions>
                     <v-spacer></v-spacer>
+
 
                 </v-card-actions>
             </v-card>
