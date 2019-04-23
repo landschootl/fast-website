@@ -42,10 +42,12 @@
                     </v-card-actions>
                 </v-card>
             </v-dialog>
+
 </template>
 
 <script>
     import DomainService from '../services/domain.service';
+
     import Catalog from './Catalog';
     import Formulary from "./Formulary";
     import Recap from './Recap';
@@ -58,7 +60,6 @@
             Catalog,
             Formulary,
             Recap
-
         },
         created() {
             this.registration = FormService.registration;
@@ -95,5 +96,4 @@
         position: absolute;
         z-index: 1;
     }
-
 </style>
