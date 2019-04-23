@@ -57,15 +57,16 @@
             this.domains = DomainService.getAll();
         },
         data: () => ({
-            domains: []
+            domains: [],
+            showCheckbox: null
         })
     }
 </script>
 
 <style scoped>
 
-    #column:nth-child(odd){
-        background: #F0F0F0;
+    #showCheckbox{
+        display: none;
     }
 
     #id_domain {
