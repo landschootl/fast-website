@@ -19,6 +19,7 @@
 
                         <v-stepper-items>
                             <v-stepper-content step="1">
+
                                 <v-card class="mb-5 no-border" color="lighten-1" height="200px"></v-card>
 
                             </v-stepper-content>
@@ -44,9 +45,13 @@
 
 <script>
     import DomainService from '../services/domain.service';
+    import Catalog from './Catalog'
 
     export default {
         name: "RelationForm",
+        components : {
+            Catalog
+        },
         created() {
             // CatalogService.getAll().then((response) => {
             //     throw new Error(response.data);
@@ -58,7 +63,8 @@
         data: () => ({
             step_panel: 0,
             dialog: false,
-            domains: []
+            domains: [],
+            showCheckbox: true
         })
     }
 </script>
@@ -67,5 +73,14 @@
     .no-border {
         -webkit-box-shadow: none;
         box-shadow: none;
+    }
+
+    #id_close_btn {
+        right: 0px;
+        position: absolute;
+    }
+
+    #showCheckbox {
+        display: inline-block;
     }
 </style>
