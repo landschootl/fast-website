@@ -24,8 +24,8 @@
                                 <ul>
                                     <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
-                                            <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
-                                            </li>
+                                            <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">{{skill.title}}</li>
+
                                         </ul>
                                     </li>
                                 </ul>
@@ -55,17 +55,12 @@
             this.domains = DomainService.getAll();
         },
         data: () => ({
-            domains: [],
-            showCheckbox: null
+            domains: []
         })
     }
 </script>
 
 <style scoped>
-
-    #showCheckbox{
-        display: none;
-    }
 
     #id_domain {
         color: #15BFAB;
