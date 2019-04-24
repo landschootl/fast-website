@@ -58,7 +58,7 @@
             // }).catch((error) => {
             //     throw new Error(error.response.data);
             // });
-            
+
             this.domains = DomainService.getAll();
 
             /**
