@@ -5,7 +5,10 @@
         <Cover/>
       </section>
       <section>
-        <Catalog/>
+        <Catalog
+        v-bind:seen="true">
+
+        </Catalog>
       </section>
       <section>
         <Relation/>
