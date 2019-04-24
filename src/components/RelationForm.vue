@@ -12,6 +12,7 @@
                         <v-stepper-header class="no-border">
                             <v-stepper-step :complete="step_panel > 1" step="1">Choix des compétences</v-stepper-step>
                             <v-divider/>
+
                             <v-stepper-step :complete="step_panel > 2" step="2">Informations personnels</v-stepper-step>
 
                             <v-divider/>
@@ -83,14 +84,5 @@
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-    
-    #id_close_btn {
-        right: 0px;
-        position: absolute;
-    }
 
-    #showCheckbox {
-        display: inline-block;
-    }
->>>>>>> refactor(relationForm): adding catalog
 </style>
