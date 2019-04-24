@@ -88,7 +88,7 @@
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-
+    
     #btn_clear {
         right: 0px;
         position: absolute;
