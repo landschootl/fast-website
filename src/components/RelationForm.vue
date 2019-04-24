@@ -108,8 +108,7 @@
         data: () => ({
             e1: 0,
             dialog: false,
-            domains: [],
-            showCheckbox: true
+            domains: []
         })
     }
 </script>
@@ -124,9 +123,4 @@
         right: 0px;
         position: absolute;
     }
-
-    #showCheckbox {
-        display: inline-block;
-    }
-
 </style>
