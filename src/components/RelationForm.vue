@@ -1,6 +1,5 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
         <v-dialog v-model="dialog" persistent max-width="900px">
-<<<<<<< HEAD
                 <template v-slot:activator="{ on }">
                     <v-btn class="blue lighten-2 mt-5" dark large v-on="on">Demander un devis</v-btn>
                 </template>
@@ -90,11 +89,11 @@
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-    
+
     #btn_clear {
         right: 0px;
         position: absolute;
         z-index: 1;
     }
-    
+
 </style>
