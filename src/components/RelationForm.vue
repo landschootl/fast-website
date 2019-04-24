@@ -13,6 +13,7 @@
                             <v-stepper-step :complete="step_panel > 1" step="1">Choix des compétences</v-stepper-step>
                             <v-divider/>
                             <v-stepper-step :complete="step_panel > 2" step="2">Informations personnels</v-stepper-step>
+
                             <v-divider/>
                             <v-stepper-step step="3">Récapitulatif</v-stepper-step>
                         </v-stepper-header>
@@ -26,6 +27,7 @@
                             </v-stepper-content>
 
                             <v-stepper-content step="2">
+
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
 
                             </v-stepper-content>
@@ -47,11 +49,13 @@
 <script>
     import DomainService from '../services/domain.service';
     import Catalog from './Catalog'
+    import Formulary from "./Formulary";
 
     export default {
         name: "RelationForm",
         components : {
-            Catalog
+            Catalog,
+            Formulary
         },
         created() {
             // CatalogService.getAll().then((response) => {
@@ -77,6 +81,16 @@
     }
 
     #id_close_btn {
+        right: 0px;
+        position: absolute;
+    }
+
+    #id_close_btn2 {
+        right: 0px;
+        position: absolute;
+    }
+
+    #id_close_btn3 {
         right: 0px;
         position: absolute;
     }
