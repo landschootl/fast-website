@@ -59,8 +59,6 @@
             
             this.domains = DomainService.getAll();
 
-            this.domains = DomainService.getAll();
-
             /**
             DomainService.getAll().then((response) => {
                 console.log((response))
