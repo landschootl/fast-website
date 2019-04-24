@@ -50,7 +50,12 @@
             showCheckbox: Boolean
         },
         created() {
-
+            // CatalogService.getAll().then((response) => {
+            //     throw new Error(response.data);
+            // }).catch((error) => {
+            //     throw new Error(error.response.data);
+            // });
+            this.domains = DomainService.getAll();
         },
         data: () => ({
             domains: []
