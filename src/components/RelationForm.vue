@@ -120,17 +120,7 @@
         box-shadow: none;
     }
 
-    #id_close_btn {
-        right: 0px;
-        position: absolute;
-    }
-
-    #id_close_btn2 {
-        right: 0px;
-        position: absolute;
-    }
-
-    #id_close_btn3 {
+    #id_close_btn, #id_close_btn2, #id_close_btn3 {
         right: 0px;
         position: absolute;
     }
