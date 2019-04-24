@@ -125,6 +125,16 @@
         position: absolute;
     }
 
+    #id_close_btn2 {
+        right: 0px;
+        position: absolute;
+    }
+
+    #id_close_btn3 {
+        right: 0px;
+        position: absolute;
+    }
+
     #showCheckbox {
         display: inline-block;
     }
