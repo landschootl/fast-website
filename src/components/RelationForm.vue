@@ -12,7 +12,7 @@
                         <v-stepper-header class="no-border">
                             <v-stepper-step :complete="e1 > 1" step="1">Choix des compétences</v-stepper-step>
                             <v-divider/>
-                            <v-stepper-step :complete="e1 > 2" step="2">Informations personnels</v-stepper-step>
+                            <v-stepper-step :complete="e1 > 2" step="2">Informations personnelles</v-stepper-step>
                             <v-divider/>
                             <v-stepper-step step="3">Récapitulatif</v-stepper-step>
                         </v-stepper-header>
@@ -25,15 +25,15 @@
                             </v-stepper-content>
 
                             <v-stepper-content step="2">
-                                <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
+                                <Formulary/>
                                 <v-btn color="primary" @click="e1 = 3">Continue</v-btn>
-                                <v-btn id="id_close_btn" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
+                                <v-btn id="id_close_btn2" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
                             </v-stepper-content>
 
                             <v-stepper-content step="3">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
                                 <v-btn color="primary" @click="e1 = 1">Envoyer</v-btn>
-                                <v-btn id="id_close_btn" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
+                                <v-btn id="id_close_btn3" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
                             </v-stepper-content>
                         </v-stepper-items>
                     </v-stepper>
@@ -89,11 +89,13 @@
 <script>
     import DomainService from '../services/domain.service';
     import Catalog from './Catalog'
+    import Formulary from "./Formulary";
 
     export default {
         name: "RelationForm",
         components : {
-            Catalog
+            Catalog,
+            Formulary
         },
         created() {
             // CatalogService.getAll().then((response) => {
@@ -119,6 +121,16 @@
     }
 
     #id_close_btn {
+        right: 0px;
+        position: absolute;
+    }
+
+    #id_close_btn2 {
+        right: 0px;
+        position: absolute;
+    }
+
+    #id_close_btn3 {
         right: 0px;
         position: absolute;
     }
