@@ -66,6 +66,7 @@
         },
         
         data: () => ({
+<<<<<<< HEAD
             domains: [],
             registration : {}
         }),
