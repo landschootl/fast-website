@@ -92,7 +92,6 @@
     }
 
     #btn_clear {
-
         right: 0px;
         position: absolute;
         z-index: 1;
