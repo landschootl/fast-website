@@ -57,6 +57,7 @@
             Catalog,
             Formulary,
             Recap
+
         },
         created() {
             this.registration = FormService.registration;
