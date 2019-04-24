@@ -24,7 +24,10 @@
                                 <ul>
                                     <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
-                                            <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">{{skill.title}}</li>
+                                            <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
+                                                <input v-if="showCheckbox" type="checkbox" name="{{skill.title}}" value="{{skill.title}}">
+                                                {{skill.title}}
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -42,6 +45,9 @@
 
     export default {
         name: "Catalog",
+        props: {
+            showCheckbox: Boolean
+        },
         created() {
             // CatalogService.getAll().then((response) => {
             //     throw new Error(response.data);

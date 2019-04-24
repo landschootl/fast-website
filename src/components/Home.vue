@@ -5,7 +5,9 @@
         <Cover/>
       </section>
       <section>
-        <Catalog/>
+        <Catalog
+          v-bind:showCheckbox="false">
+        </Catalog>
       </section>
       <section>
         <Relation/>
