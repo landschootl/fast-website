@@ -73,8 +73,7 @@
         data: () => ({
             step_panel: 0,
             dialog: false,
-            domains: [],
-            showCheckbox: true
+            domains: []
         })
     }
 </script>
@@ -84,5 +83,4 @@
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-    
 </style>
