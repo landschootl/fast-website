@@ -58,6 +58,7 @@
             Catalog,
             Formulary,
             Recap
+
         },
         created() {
             this.registration = FormService.registration;
@@ -96,5 +97,4 @@
         position: absolute;
         z-index: 1;
     }
-
 </style>

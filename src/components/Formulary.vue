@@ -15,6 +15,7 @@
                 <v-flex xs12 md4>
                     <v-text-field v-model="registration.mail"
                                   :rules="rules.emailRules" label="E-mail" required>
+
                     </v-text-field>
                 </v-flex>
             </v-layout>
