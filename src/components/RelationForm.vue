@@ -7,12 +7,14 @@
                 <v-card-title>
                     <span class="headline">Demande de devis</span>
                 </v-card-title>
+
                 <v-card-text>
                     <v-stepper v-model="step_panel" class="no-border">
                         <v-stepper-header class="no-border">
                             <v-stepper-step :complete="step_panel > 1" step="1">Choix des compétences</v-stepper-step>
                             <v-divider/>
                             <v-stepper-step :complete="step_panel > 2" step="2">Informations personnels</v-stepper-step>
+
                             <v-divider/>
                             <v-stepper-step step="3">Récapitulatif</v-stepper-step>
                         </v-stepper-header>
@@ -20,24 +22,22 @@
                         <v-stepper-items>
                             <v-stepper-content step="1">
                                 <v-card class="mb-5 no-border" color="lighten-1" height="200px"></v-card>
-                                <v-btn color="primary" @click="step_panel = 2">Continue</v-btn>
+
                             </v-stepper-content>
 
                             <v-stepper-content step="2">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
-                                <v-btn color="primary" @click="step_panel = 3">Continue</v-btn>
+
                             </v-stepper-content>
 
                             <v-stepper-content step="3">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
-                                <v-btn color="primary" @click="step_panel = 1">Envoyer</v-btn>
+
                             </v-stepper-content>
                         </v-stepper-items>
                     </v-stepper>
                 </v-card-text>
                 <v-card-actions>
-                    <v-spacer></v-spacer>
-                    <v-btn color="blue darken-1" flat @click="dialog = false">Close</v-btn>
                 </v-card-actions>
             </v-card>
         </v-dialog>
