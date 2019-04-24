@@ -27,7 +27,6 @@
                                         <ul>
                                             <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
 
-                                                {{skill.title}}
                                             </li>
                                         </ul>
                                     </li>
@@ -85,10 +84,6 @@
     #id_subdomain {
         font-weight: bold;
         padding-top: 20px;
-    }
-
-    #showCheckbox {
-        display: inline-block;
     }
 
     hr {
