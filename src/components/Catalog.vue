@@ -96,10 +96,6 @@
         padding-top: 20px;
     }
 
-    #showCheckbox {
-        display: inline-block;
-    }
-
     hr {
         display: block;
         color: black;
