@@ -56,6 +56,7 @@
             //     throw new Error(error.response.data);
             // });
 
+            this.domains = DomainService.getAll();
             /**
             DomainService.getAll().then((response) => {
                 console.log((response))
