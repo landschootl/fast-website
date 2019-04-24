@@ -26,7 +26,10 @@
                                     <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
                                             <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
+<<<<<<< HEAD
                                                 <input v-if="showCheckbox" type="checkbox" name="{{skill.title}}" value="{{skill.title}}">
+=======
+>>>>>>> refactor(catalog): restoring the json
                                                 {{skill.title}}
                                             </li>
                                         </ul>
@@ -56,7 +59,7 @@
             // }).catch((error) => {
             //     throw new Error(error.response.data);
             // });
-            
+
             this.domains = DomainService.getAll();
             /**
             DomainService.getAll().then((response) => {
