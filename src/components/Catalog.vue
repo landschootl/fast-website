@@ -57,6 +57,7 @@
             //     throw new Error(error.response.data);
             // });
 
+            this.domains = DomainService.getAll();
             /**
             DomainService.getAll().then((response) => {
                 console.log((response))
@@ -91,11 +92,7 @@
         font-weight: bold;
         padding-top: 20px;
     }
-
-    #showCheckbox {
-        display: inline-block;
-    }
-
+    
     hr {
         display: block;
         color: black;
