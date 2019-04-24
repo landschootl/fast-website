@@ -6,8 +6,7 @@
       </section>
       <section>
         <Catalog
-        v-bind:seen="true">
-
+          v-bind:showCheckbox="false">
         </Catalog>
       </section>
       <section>
