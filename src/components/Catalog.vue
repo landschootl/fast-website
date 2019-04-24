@@ -58,13 +58,14 @@
             // });
 
             this.domains = DomainService.getAll();
+
             /**
             DomainService.getAll().then((response) => {
                 console.log((response))
                 this.domains = response;
             }) **/
-
         },
+        
         data: () => ({
             domains: []
         })
