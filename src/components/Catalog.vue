@@ -85,7 +85,7 @@
         font-weight: bold;
         padding-top: 20px;
     }
-    
+
     hr {
         display: block;
         color: black;
