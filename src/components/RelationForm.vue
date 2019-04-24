@@ -108,8 +108,7 @@
         data: () => ({
             e1: 0,
             dialog: false,
-            domains: [],
-            showCheckbox: true
+            domains: []
         })
     }
 </script>
@@ -123,9 +122,5 @@
     #id_close_btn, #id_close_btn2, #id_close_btn3 {
         right: 0px;
         position: absolute;
-    }
-
-    #showCheckbox {
-        display: inline-block;
     }
 </style>

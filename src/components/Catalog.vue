@@ -57,21 +57,13 @@
             this.domains = DomainService.getAll();
         },
         data: () => ({
-            domains: [],
-            showCheckbox: null
+            domains: []
         })
     }
 </script>
 
 <style scoped>
-
-<<<<<<< HEAD
-=======
-    #showCheckbox{
-        display: none;
-    }
-
->>>>>>> refactor(relationForm): adding catalog
+    
     #id_domain {
         color: #15BFAB;
     }
