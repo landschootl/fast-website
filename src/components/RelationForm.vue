@@ -7,14 +7,12 @@
                 <v-card-title>
                     <span class="headline">Demande de devis</span>
                 </v-card-title>
-
                 <v-card-text>
                     <v-stepper v-model="step_panel" class="no-border">
                         <v-stepper-header class="no-border">
                             <v-stepper-step :complete="step_panel > 1" step="1">Choix des compétences</v-stepper-step>
                             <v-divider/>
                             <v-stepper-step :complete="step_panel > 2" step="2">Informations personnels</v-stepper-step>
-
                             <v-divider/>
                             <v-stepper-step step="3">Récapitulatif</v-stepper-step>
                         </v-stepper-header>
@@ -32,6 +30,7 @@
 
                             <v-stepper-content step="3">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
+
 
                             </v-stepper-content>
                         </v-stepper-items>
@@ -59,6 +58,7 @@
         },
         data: () => ({
             step_panel: 0,
+
             dialog: false,
             domains: []
         })
