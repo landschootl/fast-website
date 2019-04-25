@@ -85,7 +85,6 @@
 </script>
 
 <style scoped>
-<<<<<<< HEAD
     #column {
         margin-top: -6.3%;
         padding-top: 7%;
@@ -100,8 +99,6 @@
         z-index: 2 !important;
     }
 
-=======
->>>>>>> refactor(RelationForm): deleting ShowCheckBox in css
     #id_domain {
         color: #15BFAB;
     }

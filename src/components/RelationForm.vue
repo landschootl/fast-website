@@ -52,7 +52,6 @@
     import ApiService from '../services/api.service';
 
 
-
     export default {
         name: "RelationForm",
         components : {
@@ -62,7 +61,6 @@
         },
         created() {
             this.registration = FormService.registration;
-
         },
         data: () => ({
             step: 0,
