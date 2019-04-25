@@ -29,7 +29,6 @@
                                     <Formulary v-on:next="nextstep"/>
                                     <v-btn color="blue darken-1" flat @click="step = 1">Retour</v-btn>
                                 </v-stepper-content>
-
                                 <v-stepper-content step="3">
                                     <Recap v-on:finish="validate"/>
                                     <v-btn color="blue darken-1" flat @click="step = 2">Retour</v-btn>
@@ -62,6 +61,7 @@
         },
         created() {
             this.registration = FormService.registration;
+
         },
         data: () => ({
             step: 0,
@@ -81,6 +81,7 @@
                 }
             }
         }
+
     }
 </script>
 
