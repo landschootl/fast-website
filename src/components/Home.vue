@@ -5,10 +5,15 @@
         <Cover/>
       </section>
       <section>
-        <Catalog/>
+        <Catalog
+          v-bind:showCheckbox="false">
+        </Catalog>
       </section>
       <section>
         <Relation/>
+      </section>
+      <section>
+        <Testimony/>
       </section>
       <section>
         <Contact/>
@@ -21,6 +26,7 @@
     import Cover from "./Cover";
     import Catalog from "./Catalog";
     import Contact from "./Contact";
+    import Testimony from "./Testimony";
     import Relation from "./Relation";
 
     export default {
@@ -29,6 +35,7 @@
           Cover,
           Catalog,
           Relation,
+          Testimony,
           Contact
         },
         data: () => ({
