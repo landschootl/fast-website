@@ -13,6 +13,9 @@
         <Relation/>
       </section>
       <section>
+        <Testimony/>
+      </section>
+      <section>
         <Contact/>
       </section>
     </v-content>
@@ -23,6 +26,7 @@
     import Cover from "./Cover";
     import Catalog from "./Catalog";
     import Contact from "./Contact";
+    import Testimony from "./Testimony";
     import Relation from "./Relation";
 
     export default {
@@ -31,6 +35,7 @@
           Cover,
           Catalog,
           Relation,
+          Testimony,
           Contact
         },
         data: () => ({
