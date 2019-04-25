@@ -5,7 +5,7 @@ export default {
         tel: "",
         mail: "",
         description: "",
-        skills: [],
+        skills: []
     },
 
     rules : {
