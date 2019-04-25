@@ -25,7 +25,7 @@
                                     <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
                                             <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
-                                                <v-checkbox v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill.title"></v-checkbox>
+                                                <v-checkbox v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill"></v-checkbox>
                                                 {{skill.title}}
                                             </li>
                                         </ul>
