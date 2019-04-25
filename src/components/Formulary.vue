@@ -3,24 +3,24 @@
         <v-container>
             <v-layout>
                 <v-flex xs12 md4>
-                    <v-text-field v-model="name"
+                    <v-text-field v-model="registration.name"
                                  :rules="nameRules" label= "Nom" required>
                     </v-text-field>
                 </v-flex>
                 <v-flex xs12 md4>
-                    <v-text-field v-model="phone"
+                    <v-text-field v-model="registration.phone"
                                   :rules="phoneRules" label="Téléphone" required>
                     </v-text-field>
                 </v-flex>
                 <v-flex xs12 md4>
-                    <v-text-field v-model="email"
+                    <v-text-field v-model="registration.mail"
                                   :rules="emailRules" label="E-mail" required>
                     </v-text-field>
                 </v-flex>
             </v-layout>
             <v-layout>
                 <v-flex xs12 md8>
-                <v-textarea v-model="description"
+                <v-textarea v-model="registration.description"
                               label="Description">
                 </v-textarea>
                 </v-flex>
@@ -36,16 +36,20 @@
 </template>
 
 <script>
+    import FormService from '../services/form.service';
+
     export default {
         name: "Formulary",
 
+        created() {
+            this.registration = FormService.getRegistration();
+        },
+
         data: () => ({
             valid: false,
-            name: '',
             nameRules: [
                 v => !!v || 'Le nom est requis'
             ],
-            email: '',
             emailRules: [
                 v => !!v || 'Le mail est requis',
                 v => /.+@.+/.test(v) || 'Le format de données est invalide'
@@ -53,7 +57,8 @@
             phoneRules: [
                 v => !!v || 'Le numéro de téléphone est requis',
                 v => /^0[1-6]\d{8}$/.test(v) || 'Le format de données est invalide'
-            ]
+            ],
+            registration : null
         }),
     }
 </script>

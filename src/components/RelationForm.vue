@@ -21,11 +21,10 @@
 
                         <v-stepper-items>
                             <v-stepper-content step="1">
-
-
-                                <v-card class="mb-5 no-border" color="lighten-1" height="200px"></v-card>
-
-
+                                <Catalog
+                                        v-bind:showCheckbox="true"></Catalog>
+                                <v-btn color="primary" @click="e1 = 2">Continue</v-btn>
+                                <v-btn id="id_close_btn" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
                             </v-stepper-content>
 
                             <v-stepper-content step="2">
@@ -35,6 +34,7 @@
                             </v-stepper-content>
 
                             <v-stepper-content step="3">
+                                {{registration}}
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
 
                             </v-stepper-content>
@@ -53,6 +53,7 @@
     import DomainService from '../services/domain.service';
     import Catalog from './Catalog'
     import Formulary from "./Formulary";
+    import FormService from '../services/form.service';
 
 
     export default {
@@ -69,11 +70,13 @@
             //     throw new Error(error.response.data);
             // });
             this.domains = DomainService.getAll();
+            this.registration = FormService.getRegistration();
         },
         data: () => ({
             step_panel: 0,
             dialog: false,
-            domains: []
+            domains: [],
+            registration : null
         })
     }
 </script>

@@ -79,7 +79,7 @@
     #column:nth-child(odd) {
         background-color: rgba(238, 240, 239, 0.5);
     }
-    
+
     #id_card {
         z-index: 2 !important;
     }
