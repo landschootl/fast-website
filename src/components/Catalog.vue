@@ -25,7 +25,7 @@
                                     <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
                                             <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
-                                                <v-checkbox v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill.title"></v-checkbox>
+                                                <v-checkbox v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill"></v-checkbox>
                                                 {{skill.title}}
                                             </li>
                                         </ul>
@@ -44,10 +44,7 @@
 <script>
     import DomainService from '../services/domain.service';
     import FormService from '../services/form.service';
-<<<<<<< HEAD
     import ApiService from '../services/api.service';
-=======
->>>>>>> feat (form): adds a summary of what the users have entered
 
     export default {
         name: "Catalog",
@@ -59,7 +56,6 @@
                 this.domains = response;
             })*/
             this.domains = DomainService.getAll();
-<<<<<<< HEAD
             this.registration = FormService.registration;
         },
         data: () => ({
@@ -78,14 +74,6 @@
                 }
             }
         }
-=======
-            this.registration = FormService.getRegistration();
-        },
-        data: () => ({
-            domains: [],
-            registration: null
-        })
->>>>>>> feat (form): adds a summary of what the users have entered
     }
 </script>
 
