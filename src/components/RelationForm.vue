@@ -31,8 +31,7 @@
                             </v-stepper-content>
 
                             <v-stepper-content step="3">
-                                {{registration}}
-                                <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
+                                <Recap/>
                                 <v-btn color="primary" @click="e1 = 1">Envoyer</v-btn>
 
                             </v-stepper-content>
@@ -91,6 +90,7 @@
     import DomainService from '../services/domain.service';
     import Catalog from './Catalog';
     import Formulary from "./Formulary";
+    import Recap from './Recap';
     import FormService from '../services/form.service';
 
 
@@ -98,7 +98,8 @@
         name: "RelationForm",
         components : {
             Catalog,
-            Formulary
+            Formulary,
+            Recap
         },
         created() {
             // CatalogService.getAll().then((response) => {
