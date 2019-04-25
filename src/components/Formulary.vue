@@ -10,11 +10,13 @@
                 <v-flex xs12 md4>
                     <v-text-field v-model="registration.tel"
                                   :rules="rules.phoneRules" label="Téléphone" required>
+
                     </v-text-field>
                 </v-flex>
                 <v-flex xs12 md4>
                     <v-text-field v-model="registration.mail"
                                   :rules="rules.emailRules" label="E-mail" required>
+
 
                     </v-text-field>
                 </v-flex>
@@ -41,6 +43,7 @@
     import FormService from '../services/form.service';
     import ApiService from '../services/api.service';
 
+
     export default {
         name: "Formulary",
 
@@ -53,6 +56,7 @@
             valid: false,
             rules : {},
             registration : {},
+
         }),
         methods: {
             validate() {

@@ -52,7 +52,6 @@
     import ApiService from '../services/api.service';
 
 
-
     export default {
         name: "RelationForm",
         components : {
@@ -61,7 +60,13 @@
             Recap
         },
         created() {
-            this.registration = FormService.registration;
+            // CatalogService.getAll().then((response) => {
+            //     throw new Error(response.data);
+            // }).catch((error) => {
+            //     throw new Error(error.response.data);
+            // });
+            this.domains = DomainService.getAll();
+            this.registration = FormService.getRegistration();
         },
         data: () => ({
             step: 0,
