@@ -3,7 +3,8 @@ export default {
         name: "",
         phone: "",
         mail: "",
-        description: ""
+        description: "",
+        skills: []
     },
 
     getRegistration() {
