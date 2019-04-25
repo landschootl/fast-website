@@ -60,6 +60,7 @@
         },
         created() {
             this.registration = FormService.registration;
+
         },
         data: () => ({
             step: 0,
