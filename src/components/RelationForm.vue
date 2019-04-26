@@ -24,7 +24,6 @@
                                     <Catalog
                                             v-bind:showCheckbox="true"
                                             v-on:next="nextstep"/>
-<<<<<<< HEAD
                                 </v-stepper-content>
                                 <v-stepper-content step="2">
                                     <Formulary v-on:next="nextstep"/>
