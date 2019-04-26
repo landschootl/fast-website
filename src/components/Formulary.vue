@@ -42,7 +42,6 @@
     import FormService from '../services/form.service';
     import ApiService from '../services/api.service';
 
-
     export default {
         name: "Formulary",
 
@@ -62,6 +61,7 @@
                 if (this.$refs.form.validate()) {
                     this.$emit('next')
                     //ApiService.updateQuote();
+
                 }
             }
         }
