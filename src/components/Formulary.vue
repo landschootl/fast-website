@@ -38,6 +38,7 @@
 
 <script>
     import FormService from '../services/form.service';
+    import ApiService from '../services/api.service';
 
     export default {
         name: "Formulary",
@@ -66,18 +67,7 @@
                 if (this.$refs.form.validate()) {
                     console.log('ok')
                     this.$emit('next')
-                    fetch(`http://localhost:8080/api/quotes/${this.registration.id}`, {
-                        method: 'PUT',
-                        body: JSON.stringify(this.registration),
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Accept": "application/json"
-                        }
-                    }).then((response) => response.json())
-                        .then((data) => {
-                            console.log(data);
-                            this.registration.id = data.id;
-                        })
+                    ApiService.updateQuote();
                 }
             }
         }
