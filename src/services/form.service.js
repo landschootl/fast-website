@@ -1,10 +1,11 @@
 export default {
     registration:{
+        id: null,
         name: "",
-        phone: "",
+        tel: "",
         mail: "",
         description: "",
-        skills: []
+        skills: [],
     },
 
     getRegistration() {
