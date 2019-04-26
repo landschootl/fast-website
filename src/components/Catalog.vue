@@ -47,6 +47,7 @@
 <script>
     import DomainService from '../services/domain.service';
     import FormService from '../services/form.service';
+    import ApiService from '../services/api.service';
 
     export default {
         name: "Catalog",
@@ -71,37 +72,15 @@
         }),
         methods: {
             validate() {
-                console.log('salut')
+                console.log(this.registration)
                 if(this.registration.skills.length > 0) {
                     console.log(JSON.stringify(this.registration))
                     this.$emit('next');
-                    if(this.registration.id == null) {
-                        fetch('http://localhost:8080/api/quotes', {
-                            method: 'POST',
-                            body: JSON.stringify(this.registration),
-                            headers: {
-                                "Content-Type": "application/json",
-                                "Accept": "application/json"
-                            }
-                        }).then((response) => response.json())
-                            .then((data) => {
-                                console.log(data);
-                                this.registration.id = data.id;
-                            })
+                    if(this.registration.id < 0) {
+                        ApiService.createQuote();
                     }else{
                         console.log("ici faut faire un update");
-                        fetch(`http://localhost:8080/api/quotes/${this.registration.id}`, {
-                            method: 'PUT',
-                            body: JSON.stringify(this.registration),
-                            headers: {
-                                "Content-Type": "application/json",
-                                "Accept": "application/json"
-                            }
-                        }).then((response) => response.json())
-                            .then((data) => {
-                                console.log(data);
-                                this.registration.id = data.id;
-                            })
+                        ApiService.updateQuote();
                     }
                 }
             }
