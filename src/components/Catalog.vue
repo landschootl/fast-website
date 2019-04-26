@@ -25,7 +25,7 @@
                                     <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
                                             <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
-                                                <v-checkbox v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill"></v-checkbox>
+                                                <input type="checkbox" id="checkbox" v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill">
                                                 {{skill.title}}
                                             </li>
                                         </ul>
@@ -35,6 +35,7 @@
                         </v-card>
                     </v-flex>
                 </v-layout>
+                <v-btn v-if="showCheckbox" color="primary" @click="validate">Continue</v-btn>
             </v-container>
         </v-flex>
     </v-layout>
@@ -55,13 +56,54 @@
             // }).catch((error) => {
             //     throw new Error(error.response.data);
             // });
-            this.domains = DomainService.getAll();
+            DomainService.getAll().then((response) => {
+                console.log((response))
+                this.domains = response;
+            })
+            //this.domains = DomainService.getAll();
             this.registration = FormService.getRegistration();
         },
         data: () => ({
             domains: [],
             registration: null
-        })
+        }),
+        methods: {
+            validate() {
+                console.log('salut')
+                if(this.registration.skills.length > 0) {
+                    console.log(JSON.stringify(this.registration))
+                    this.$emit('next');
+                    if(this.registration.id == null) {
+                        fetch('http://localhost:8080/api/quotes', {
+                            method: 'POST',
+                            body: JSON.stringify(this.registration),
+                            headers: {
+                                "Content-Type": "application/json",
+                                "Accept": "application/json"
+                            }
+                        }).then((response) => response.json())
+                            .then((data) => {
+                                console.log(data);
+                                this.registration.id = data.id;
+                            })
+                    }else{
+                        console.log("ici faut faire un update");
+                        fetch(`http://localhost:8080/api/quotes/${this.registration.id}`, {
+                            method: 'PUT',
+                            body: JSON.stringify(this.registration),
+                            headers: {
+                                "Content-Type": "application/json",
+                                "Accept": "application/json"
+                            }
+                        }).then((response) => response.json())
+                            .then((data) => {
+                                console.log(data);
+                                this.registration.id = data.id;
+                            })
+                    }
+                }
+            }
+        }
     }
 </script>
 
@@ -101,6 +143,11 @@
 
     ul {
         list-style: none;
+    }
+
+    #checkbox {
+        margin: 0;
+        padding: 0;
     }
 
 </style>
