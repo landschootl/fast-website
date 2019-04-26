@@ -10,7 +10,6 @@
                 <v-flex xs12 md4>
                     <v-text-field v-model="registration.tel"
                                   :rules="rules.phoneRules" label="Téléphone" required>
-
                     </v-text-field>
                 </v-flex>
                 <v-flex xs12 md4>
