@@ -1,6 +1,5 @@
 <template>
     <div>
-<<<<<<< HEAD
         <v-container>
             <h3>Informations personnelles</h3><v-divider></v-divider>
             <v-icon>account_circle</v-icon>

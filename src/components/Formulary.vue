@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
     <v-form ref="form" v-model="valid" lazy-validation >
         <v-container>
             <v-layout>
