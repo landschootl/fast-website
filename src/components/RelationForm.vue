@@ -104,6 +104,7 @@
     import Formulary from "./Formulary";
     import Recap from './Recap';
     import FormService from '../services/form.service';
+    import ApiService from '../services/api.service';
 
 
     export default {
@@ -135,30 +136,11 @@
             },
             validate() {
                 if(this.registration.skills.length > 0) {
-                    fetch(`http://localhost:8080/api/quotes/${this.registration.id}`, {
-                        method: 'PUT',
-                        body: JSON.stringify(this.registration),
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Accept": "application/json"
-                        }
-                    }).then((response) => response.json())
-                        .then((data) => {
-                            console.log(data);
-                            this.registration.id = data.id;
-                        })
-
-                    fetch(`http://localhost:8080/api/quotes/${this.registration.id}/validate`, {
-                        method: 'PUT',
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Accept": "application/json"
-                        }
-                    }).then((response) => response.json())
-                        .then((data) => {
-                            console.log(data);
-                            this.registration.id = data.id;
-                        })
+                    ApiService.updateQuote();
+                    ApiService.validateQuote();
+                    this.dialog = false;
+                    this.e1 = 1;
+                    FormService.reset();
                 }
             }
         }
