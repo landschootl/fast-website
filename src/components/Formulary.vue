@@ -1,5 +1,5 @@
 <template>
-    <v-form ref="form" v-model="valid" lazy-validation>
+    <v-form ref="form" v-model="valid" lazy-validation >
         <v-container>
             <v-layout>
                 <v-flex xs12 md4>
@@ -8,7 +8,7 @@
                     </v-text-field>
                 </v-flex>
                 <v-flex xs12 md4>
-                    <v-text-field v-model="registration.phone"
+                    <v-text-field v-model="registration.tel"
                                   :rules="phoneRules" label="Téléphone" required>
                     </v-text-field>
                 </v-flex>
@@ -32,6 +32,7 @@
                 label="Cochez pour continuer"
                 required>
         </v-checkbox>
+        <v-btn :disabled="!valid" color="primary" @click="validate">Continue</v-btn>
     </v-form>
 </template>
 
@@ -58,8 +59,28 @@
                 v => !!v || 'Le numéro de téléphone est requis',
                 v => /^0[1-6]\d{8}$/.test(v) || 'Le format de données est invalide'
             ],
-            registration : null
+            registration : null,
         }),
+        methods: {
+            validate() {
+                if (this.$refs.form.validate()) {
+                    console.log('ok')
+                    this.$emit('next')
+                    fetch(`http://localhost:8080/api/quotes/${this.registration.id}`, {
+                        method: 'PUT',
+                        body: JSON.stringify(this.registration),
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        }
+                    }).then((response) => response.json())
+                        .then((data) => {
+                            console.log(data);
+                            this.registration.id = data.id;
+                        })
+                }
+            }
+        }
     }
 </script>
 
