@@ -7,6 +7,8 @@
         <p>{{registration.phone}}</p>
         <h4><v-icon>email</v-icon></h4>
         <p>{{registration.mail}}</p>
+        <h4><v-icon>notes</v-icon></h4>
+        <p>{{registration.description}}</p>
         <h3>Vos compétences choisies</h3><v-divider></v-divider>
         <v-chip close v-for="skill in registration.skills" @input="remove(skill)">{{skill.title}}</v-chip>
     </div>
