@@ -157,7 +157,7 @@
         margin: 0;
         padding: 0;
     }
-
+    
     .btn_continue {
         right: 0px;
         position: absolute;
