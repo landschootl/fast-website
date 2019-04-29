@@ -21,7 +21,7 @@
             <v-layout>
                 <v-flex xs12 md8>
                 <v-textarea v-model="registration.description"
-                              label="Description">
+                              label="Commentaire">
                 </v-textarea>
                 </v-flex>
             </v-layout>
