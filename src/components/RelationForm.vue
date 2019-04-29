@@ -5,15 +5,18 @@
                     <v-btn class="blue lighten-2 mt-5" dark large v-on="on">Demander un devis</v-btn>
                 </template>
                 <v-card>
+                    <v-btn icon id="btn_clear" @click="dialog = false">
+                        <v-icon>clear</v-icon>
+                    </v-btn>
                     <v-card-title>
                         <span class="headline">Demande de devis</span>
                     </v-card-title>
                     <v-card-text>
-                        <v-stepper v-model="e1" class="no-border">
+                        <v-stepper v-model="step" class="no-border">
                             <v-stepper-header class="no-border">
-                                <v-stepper-step :complete="e1 > 1" step="1">Choix des compétences</v-stepper-step>
+                                <v-stepper-step :complete="step > 1" step="1">Choix des compétences</v-stepper-step>
                                 <v-divider/>
-                                <v-stepper-step :complete="e1 > 2" step="2">Informations personnelles</v-stepper-step>
+                                <v-stepper-step :complete="step > 2" step="2">Informations personnelles</v-stepper-step>
                                 <v-divider/>
                                 <v-stepper-step step="3">Récapitulatif</v-stepper-step>
                             </v-stepper-header>
@@ -22,70 +25,18 @@
                                     <Catalog
                                             v-bind:showCheckbox="true"
                                             v-on:next="nextstep"/>
-                                    <v-card-actions>
-                                        <v-spacer></v-spacer>
-                                    <v-btn id="id_close_btn" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
-                                    </v-card-actions>
                                 </v-stepper-content>
 
                                 <v-stepper-content step="2">
                                     <Formulary v-on:next="nextstep"/>
-                                    <v-card-actions>
-                                        <v-spacer></v-spacer>
-                                    <v-btn color="blue darken-1" flat @click="e1 = 1">Retour</v-btn>
-                                    <v-btn id="id_close_btn2" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
-                                    </v-card-actions>
+                                    <v-btn color="blue darken-1" flat @click="step = 1">Retour</v-btn>
                                 </v-stepper-content>
                                 <v-stepper-content step="3">
-                                    <Recap/>
-                                    <v-btn color="primary" @click="validate">Envoyer</v-btn>
-                                    <v-card-actions>
-                                        <v-spacer></v-spacer>
-                                    <v-btn color="blue darken-1" flat @click="e1 = 2">Retour</v-btn>
-                                    <v-btn id="id_close_btn3" color="blue darken-1" flat @click="dialog = false">Close</v-btn>
-                                    </v-card-actions>
+                                    <Recap v-on:finish="validate"/>
+                                    <v-btn color="blue darken-1" flat @click="step = 2">Retour</v-btn>
                                 </v-stepper-content>
                             </v-stepper-items>
                         </v-stepper>
-    <!--                    <v-container grid-list-md>-->
-    <!--                        <v-layout wrap>-->
-    <!--                            <v-flex xs12 sm6 md4>-->
-    <!--                                <v-text-field label="Legal first name*" required></v-text-field>-->
-    <!--                            </v-flex>-->
-    <!--                            <v-flex xs12 sm6 md4>-->
-    <!--                                <v-text-field label="Legal middle name" hint="example of helper text only on focus"></v-text-field>-->
-    <!--                            </v-flex>-->
-    <!--                            <v-flex xs12 sm6 md4>-->
-    <!--                                <v-text-field-->
-    <!--                                        label="Legal last name*"-->
-    <!--                                        hint="example of persistent helper text"-->
-    <!--                                        persistent-hint-->
-    <!--                                        required-->
-    <!--                                ></v-text-field>-->
-    <!--                            </v-flex>-->
-    <!--                            <v-flex xs12>-->
-    <!--                                <v-text-field label="Email*" required></v-text-field>-->
-    <!--                            </v-flex>-->
-    <!--                            <v-flex xs12>-->
-    <!--                                <v-text-field label="Password*" type="password" required></v-text-field>-->
-    <!--                            </v-flex>-->
-    <!--                            <v-flex xs12 sm6>-->
-    <!--                                <v-select-->
-    <!--                                        :items="['0-17', '18-29', '30-54', '54+']"-->
-    <!--                                        label="Age*"-->
-    <!--                                        required-->
-    <!--                                ></v-select>-->
-    <!--                            </v-flex>-->
-    <!--                            <v-flex xs12 sm6>-->
-    <!--                                <v-autocomplete-->
-    <!--                                        :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"-->
-    <!--                                        label="Interests"-->
-    <!--                                        multiple-->
-    <!--                                ></v-autocomplete>-->
-    <!--                            </v-flex>-->
-    <!--                        </v-layout>-->
-    <!--                    </v-container>-->
-    <!--                    <small>*indicates required field</small>-->
                     </v-card-text>
                     <v-card-actions>
                         <v-spacer></v-spacer>
@@ -118,25 +69,23 @@
             //     throw new Error(error.response.data);
             // });
             this.domains = DomainService.getAll();
-            this.registration = FormService.getRegistration();
+            this.registration = FormService.registration;
         },
         data: () => ({
-            e1: 0,
+            step: 0,
             dialog: false,
             domains: [],
-            registration : null
+            registration : {}
 
         }),
         methods : {
             nextstep() {
-                this.e1++;
+                this.step++;
             },
             validate() {
                 if(this.registration.skills.length > 0) {
-                    ApiService.updateQuote();
-                    ApiService.validateQuote();
                     this.dialog = false;
-                    this.e1 = 1;
+                    this.step = 1;
                     FormService.reset();
                 }
             }
@@ -150,5 +99,9 @@
         box-shadow: none;
     }
 
+    #btn_clear {
+        right: 0px;
+        position: absolute;
+    }
 
 </style>

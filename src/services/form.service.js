@@ -8,8 +8,18 @@ export default {
         skills: [],
     },
 
-    getRegistration() {
-        return this.registration;
+    rules : {
+        nameRules: [
+            v => !!v || 'Le nom est requis'
+        ],
+        emailRules: [
+            v => !!v || 'Le mail est requis',
+            v => /.+@.+/.test(v) || 'Le format de données est invalide'
+        ],
+        phoneRules: [
+            v => !!v || 'Le numéro de téléphone est requis',
+            v => /^0[1-6]\d{8}$/.test(v) || 'Le format de données est invalide'
+        ]
     },
 
     reset() {

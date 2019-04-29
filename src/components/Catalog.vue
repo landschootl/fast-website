@@ -35,7 +35,7 @@
                         </v-card>
                     </v-flex>
                 </v-layout>
-                <v-btn v-if="showCheckbox" color="primary" @click="validate">Continue</v-btn>
+                <v-btn class="btn_continue" v-if="showCheckbox" color="primary" @click="validate">Continue</v-btn>
             </v-container>
         </v-flex>
     </v-layout>
@@ -58,26 +58,22 @@
             //     throw new Error(error.response.data);
             // });
             DomainService.getAll().then((response) => {
-                console.log((response))
                 this.domains = response;
             })
             //this.domains = DomainService.getAll();
-            this.registration = FormService.getRegistration();
+            this.registration = FormService.registration;
         },
         data: () => ({
             domains: [],
-            registration: null
+            registration : {}
         }),
         methods: {
             validate() {
-                console.log(this.registration)
                 if(this.registration.skills.length > 0) {
-                    console.log(JSON.stringify(this.registration))
                     this.$emit('next');
                     if(this.registration.id < 0) {
                         ApiService.createQuote();
                     }else{
-                        console.log("ici faut faire un update");
                         ApiService.updateQuote();
                     }
                 }
@@ -127,6 +123,11 @@
     #checkbox {
         margin: 0;
         padding: 0;
+    }
+
+    .btn_continue {
+        right: 0px;
+        position: absolute;
     }
 
 </style>
