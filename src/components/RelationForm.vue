@@ -89,4 +89,8 @@
         box-shadow: none;
     }
 
+    #btn_clear {
+        right: 0px;
+        position: absolute;
+    }
 </style>
