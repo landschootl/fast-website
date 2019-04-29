@@ -1,16 +1,18 @@
 <template>
     <div>
-        <h3>Informations personnelles</h3><v-divider></v-divider>
-        <v-icon>account_circle</v-icon>
-        {{registration.name}}<br>
-        <v-icon>call</v-icon>
-        {{registration.tel}}<br>
-        <v-icon>email</v-icon>
-        {{registration.mail}}<br>
-        <v-icon>notes</v-icon>
-        {{registration.description}}<br>
-        <h3>Vos compétences choisies</h3><v-divider></v-divider>
-        <v-chip v-for="skill in registration.skills" @input="remove(skill)">{{skill.title}}</v-chip>
+        <v-container>
+            <h3>Informations personnelles</h3><v-divider></v-divider>
+            <v-icon>account_circle</v-icon>
+            {{registration.name}}<br><br>
+            <v-icon>call</v-icon>
+            {{registration.tel}}<br><br>
+            <v-icon>email</v-icon>
+            {{registration.mail}}<br><br>
+            <v-icon>notes</v-icon>
+            {{registration.description}}<br><br>
+            <h3>Vos compétences choisies</h3><v-divider></v-divider>
+            <v-chip v-for="skill in registration.skills" @input="remove(skill)">{{skill.title}}</v-chip>
+        </v-container>
         <v-btn class="btn_continue" color="primary" @click="validate">Envoyer</v-btn>
     </div>
 </template>
