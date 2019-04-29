@@ -162,4 +162,9 @@
         position: absolute;
     }
 
+    .btn_continue {
+        right: 0px;
+        position: absolute;
+    }
+
 </style>
