@@ -4,17 +4,17 @@
             <v-layout>
                 <v-flex xs12 md4>
                     <v-text-field v-model="registration.name"
-                                 :rules="nameRules" label= "Nom" required>
+                                 :rules="rules.nameRules" label= "Nom" required>
                     </v-text-field>
                 </v-flex>
                 <v-flex xs12 md4>
                     <v-text-field v-model="registration.tel"
-                                  :rules="phoneRules" label="Téléphone" required>
+                                  :rules="rules.phoneRules" label="Téléphone" required>
                     </v-text-field>
                 </v-flex>
                 <v-flex xs12 md4>
                     <v-text-field v-model="registration.mail"
-                                  :rules="emailRules" label="E-mail" required>
+                                  :rules="rules.emailRules" label="E-mail" required>
                     </v-text-field>
                 </v-flex>
             </v-layout>
@@ -32,7 +32,7 @@
                 label="Cochez pour continuer"
                 required>
         </v-checkbox>
-        <v-btn :disabled="!valid" color="primary" @click="validate">Continue</v-btn>
+        <v-btn class="btn_continue" :disabled="!valid" color="primary" @click="validate">Continue</v-btn>
     </v-form>
 </template>
 
@@ -44,28 +44,18 @@
         name: "Formulary",
 
         created() {
-            this.registration = FormService.getRegistration();
+            this.rules = FormService.rules;
+            this.registration = FormService.registration;
         },
 
         data: () => ({
             valid: false,
-            nameRules: [
-                v => !!v || 'Le nom est requis'
-            ],
-            emailRules: [
-                v => !!v || 'Le mail est requis',
-                v => /.+@.+/.test(v) || 'Le format de données est invalide'
-            ],
-            phoneRules: [
-                v => !!v || 'Le numéro de téléphone est requis',
-                v => /^0[1-6]\d{8}$/.test(v) || 'Le format de données est invalide'
-            ],
-            registration : null,
+            rules : {},
+            registration : {},
         }),
         methods: {
             validate() {
                 if (this.$refs.form.validate()) {
-                    console.log('ok')
                     this.$emit('next')
                     ApiService.updateQuote();
                 }
@@ -75,5 +65,10 @@
 </script>
 
 <style scoped>
+
+    .btn_continue {
+        right: 0px;
+        position: absolute;
+    }
 
 </style>

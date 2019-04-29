@@ -1,39 +1,52 @@
 <template>
     <div>
         <h3>Informations personnelles</h3><v-divider></v-divider>
-        <h4><v-icon>account_circle</v-icon></h4>
-        <p>{{registration.name}}</p>
-        <h4><v-icon>call</v-icon></h4>
-        <p>{{registration.phone}}</p>
-        <h4><v-icon>email</v-icon></h4>
-        <p>{{registration.mail}}</p>
-        <h4><v-icon>notes</v-icon></h4>
-        <p>{{registration.description}}</p>
+        <v-icon>account_circle</v-icon>
+        {{registration.name}}<br>
+        <v-icon>call</v-icon>
+        {{registration.tel}}<br>
+        <v-icon>email</v-icon>
+        {{registration.mail}}<br>
+        <v-icon>notes</v-icon>
+        {{registration.description}}<br>
         <h3>Vos compétences choisies</h3><v-divider></v-divider>
-        <v-chip close v-for="skill in registration.skills" @input="remove(skill)">{{skill.title}}</v-chip>
+        <v-chip v-for="skill in registration.skills" @input="remove(skill)">{{skill.title}}</v-chip>
+        <v-btn class="btn_continue" color="primary" @click="validate">Envoyer</v-btn>
     </div>
 </template>
 
 <script>
 
     import FormService from '../services/form.service';
+    import ApiService from '../services/api.service';
 
     export default {
         name: "Recap",
         created() {
-          this.registration = FormService.getRegistration();
+          this.registration = FormService.registration;
         },
         data: () => ({
-            registration : null
+            registration : {}
         }),
         methods: {
             remove(item) {
                 this.registration.skills.splice(this.registration.skills.indexOf(item),1);
+            },
+
+            validate() {
+                ApiService.updateQuote();
+                ApiService.validateQuote();
+                this.$emit('finish');
             }
         }
     }
 </script>
 
 <style scoped>
+
+    .btn_continue {
+        right: 0px;
+        position: absolute;
+    }
 
 </style>
