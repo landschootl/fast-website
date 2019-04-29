@@ -1,6 +1,6 @@
 <template>
     <v-layout column wrap class="my-1">
-        <v-flex id="id_title" xs12 sm4 class="my-3">
+        <v-flex v-if="!showCheckbox" id="id_title" xs12 sm4 class="my-3">
             <div class="text-xs-center">
                 <h2 class="headline">FORMATIONS & AUDIT</h2>
                 <span class="subheading">
@@ -13,7 +13,7 @@
                 <v-layout align-top>
                     <v-flex id="column" xs12 md3 v-for="(domain, index) in domains" :key="index">
                         <v-card class="elevation-0 transparent">
-                            <v-card-text class="text-xs-center">
+                            <v-card-text v-if="!showCheckbox" class="text-xs-center">
                                 <v-icon x-large class="blue--text text--lighten-2">{{domain.icon}}</v-icon>
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
