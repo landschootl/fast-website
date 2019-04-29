@@ -66,7 +66,7 @@
             //     throw new Error(error.response.data);
             // });
             this.domains = DomainService.getAll();
-            this.registration = FormService.getRegistration();
+            this.registration = FormService.registration;
         },
         data: () => ({
             step: 0,

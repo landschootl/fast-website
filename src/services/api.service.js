@@ -36,6 +36,5 @@ export default {
                 "Accept": "application/json"
             }
         })
-
     }
 }
