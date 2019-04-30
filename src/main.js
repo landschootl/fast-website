@@ -3,6 +3,8 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import Axios from 'axios';
 
+import "./stylus/main.styl";
+
 import './plugins/vuetify'
 import './plugins/vue-router'
 
