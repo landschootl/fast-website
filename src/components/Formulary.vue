@@ -57,7 +57,7 @@
             validate() {
                 if (this.$refs.form.validate()) {
                     this.$emit('next')
-                    ApiService.updateQuote();
+                    //ApiService.updateQuote();
                 }
             }
         }
