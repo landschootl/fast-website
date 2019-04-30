@@ -36,8 +36,8 @@
             },
 
             validate() {
-                ApiService.updateQuote();
-                ApiService.validateQuote();
+                //ApiService.updateQuote();
+                //ApiService.validateQuote();
                 this.$emit('finish');
             }
         }
