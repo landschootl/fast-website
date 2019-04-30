@@ -1,9 +1,5 @@
 FROM node:lts-alpine
 
-# install simple git for serving static content
-RUN apk update && apk upgrade && \
-    apk add --no-cache git
-
 # make the 'app' folder the current working directory
 WORKDIR /app
 
