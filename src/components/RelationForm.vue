@@ -20,41 +20,23 @@
                         <v-stepper-items>
                             <v-stepper-content step="1">
                                 <v-card class="mb-5 no-border" color="lighten-1" height="200px"></v-card>
-<<<<<<< HEAD
 
-=======
-                                <v-btn color="primary" @click="step_panel = 2">Continue</v-btn>
->>>>>>> refactor(catalog): deleting some spaces
                             </v-stepper-content>
 
                             <v-stepper-content step="2">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
-<<<<<<< HEAD
 
-=======
-                                <v-btn color="primary" @click="step_panel = 3">Continue</v-btn>
->>>>>>> refactor(catalog): deleting some spaces
                             </v-stepper-content>
 
                             <v-stepper-content step="3">
                                 <v-card class="mb-5 no-border" color=" lighten-1" height="200px"></v-card>
-<<<<<<< HEAD
 
-
-=======
-                                <v-btn color="primary" @click="step_panel = 1">Envoyer</v-btn>
->>>>>>> refactor(catalog): deleting some spaces
                             </v-stepper-content>
                         </v-stepper-items>
                     </v-stepper>
                 </v-card-text>
                 <v-card-actions>
-<<<<<<< HEAD
 
-=======
-                    <v-spacer></v-spacer>
-                    <v-btn color="blue darken-1" flat @click="dialog = false">Close</v-btn>
->>>>>>> refactor(catalog): deleting some spaces
                 </v-card-actions>
             </v-card>
         </v-dialog>
@@ -75,10 +57,6 @@
         },
         data: () => ({
             step_panel: 0,
-<<<<<<< HEAD
-
-=======
->>>>>>> refactor(catalog): deleting some spaces
             dialog: false,
             domains: []
         })
