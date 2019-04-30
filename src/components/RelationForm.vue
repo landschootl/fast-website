@@ -5,9 +5,12 @@
                     <v-btn class="blue lighten-2 mt-5" dark large v-on="on">Demander un devis</v-btn>
                 </template>
                 <v-card>
-                        <v-btn icon id="btn_clear" @click="dialog = false">
-                            <v-icon>clear</v-icon>
-                        </v-btn>
+                    <v-btn icon id="btn_clear" @click="dialog = false">
+                        <v-icon>clear</v-icon>
+                    </v-btn>
+                    <v-card-title>
+                        <span class="headline">Demande de devis</span>
+                    </v-card-title>
                     <v-card-text>
                         <v-stepper v-model="step" class="no-border">
                             <v-stepper-header class="no-border">
