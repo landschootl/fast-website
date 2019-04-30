@@ -1,5 +1,5 @@
 <template>
-    <v-layout column wrap class="my-1">
+    <v-layout id="id_layout" column wrap class="my-1">
         <v-flex id="id_title" xs12 sm4 class="my-3">
             <div class="text-xs-center">
                 <h2 class="headline">FORMATIONS & AUDITS</h2>
@@ -9,17 +9,17 @@
             </div>
         </v-flex>
         <v-flex xs12>
-            <v-container grid-list-xl>
+            <v-container id="id_container" grid-list-xl>
                 <v-layout  row wrap justify-center align-top>
                     <v-flex id="column" xs12 md3 v-for="(domain, index) in domains" :key="index">
-                        <v-card class="elevation-0 transparent">
+                        <v-card id="id_card" class="elevation-0 transparent">
                             <v-card-text class="text-xs-center">
-                                <v-icon x-large class="blue--text text--lighten-2">{{domain.icon}}</v-icon>
+                                <v-icon id="id_icon_domain" x-large>{{domain.icon}}</v-icon>
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
                                 <div id="id_domain" class="headline">{{domain.title}}</div>
                             </v-card-title>
-                            <hr>
+                            <hr/>
                             <v-card-text>
                                 <form>
                                 <ul>
@@ -27,7 +27,6 @@
                                         <ul>
                                             <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
 
-                                                <input v-if="showCheckbox" type="checkbox" name="skill.title" value="{{skill.title}}">
                                                 {{skill.title}}
 
                                             </li>
@@ -77,8 +76,39 @@
 
 <style scoped>
 
+    #column {
+        margin-top: -6.3%;
+        padding-top: 7%;
+        padding-bottom: 0%;
+    }
+
+    #column:nth-child(odd) {
+        background-color: rgba(238, 240, 239, 0.5);
+    }
+
+    #id_card {
+        z-index: 2 !important;
+    }
+
     #id_domain {
         color: #15BFAB;
+    }
+
+    #id_icon_domain {
+        color: #15BFAB !important;
+    }
+
+    #id_layout {
+        background-image: url("../assets/catalog_background.jpg");
+    }
+
+    #id_title {
+        z-index: 3;
+    }
+
+    #id_container {
+        padding: 0px !important;
+        max-width: none !important;
     }
 
     #list_skills {
