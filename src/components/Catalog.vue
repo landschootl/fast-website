@@ -52,15 +52,10 @@
             showCheckbox: Boolean
         },
         created() {
-            // CatalogService.getAll().then((response) => {
-            //     throw new Error(response.data);
-            // }).catch((error) => {
-            //     throw new Error(error.response.data);
-            // });
-            DomainService.getAll().then((response) => {
+            /*DomainService.getAll().then((response) => {
                 this.domains = response;
-            })
-            //this.domains = DomainService.getAll();
+            })*/
+            this.domains = DomainService.getAll();
             this.registration = FormService.registration;
         },
         data: () => ({
@@ -72,9 +67,9 @@
                 if(this.registration.skills.length > 0) {
                     this.$emit('next');
                     if(this.registration.id < 0) {
-                        ApiService.createQuote();
+                        //ApiService.createQuote();
                     }else{
-                        ApiService.updateQuote();
+                        //ApiService.updateQuote();
                     }
                 }
             }
