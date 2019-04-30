@@ -42,8 +42,6 @@
                     </v-card-text>
                     <v-card-actions>
                         <v-spacer></v-spacer>
-
-    <!--                    <v-btn color="blue darken-1" flat @click="dialog = false">Save</v-btn>-->
                     </v-card-actions>
                 </v-card>
             </v-dialog>
@@ -65,12 +63,6 @@
             Recap
         },
         created() {
-            // CatalogService.getAll().then((response) => {
-            //     throw new Error(response.data);
-            // }).catch((error) => {
-            //     throw new Error(error.response.data);
-            // });
-            this.domains = DomainService.getAll();
             this.registration = FormService.registration;
         },
         data: () => ({
