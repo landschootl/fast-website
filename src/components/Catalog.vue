@@ -56,10 +56,11 @@
             showCheckbox: Boolean
         },
         created() {
-            DomainService.getAll().then((response) => {
+            /*DomainService.getAll().then((response) => {
+
                 this.domains = response;
-            })
-            //this.domains = DomainService.getAll();
+            })*/
+            this.domains = DomainService.getAll();
             this.registration = FormService.registration;
         },
         
@@ -72,9 +73,9 @@
                 if(this.registration.skills.length > 0) {
                     this.$emit('next');
                     if(this.registration.id < 0) {
-                        ApiService.createQuote();
+                        //ApiService.createQuote();
                     }else{
-                        ApiService.updateQuote();
+                        //ApiService.updateQuote();
                     }
                 }
             }
