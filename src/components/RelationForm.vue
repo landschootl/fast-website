@@ -45,11 +45,13 @@
 
 <script>
     import DomainService from '../services/domain.service';
+
     import Catalog from './Catalog';
     import Formulary from "./Formulary";
     import Recap from './Recap';
     import FormService from '../services/form.service';
     import ApiService from '../services/api.service';
+
 
 
     export default {
