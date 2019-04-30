@@ -87,6 +87,7 @@
 
     #id_domain {
         color: #15BFAB;
+        font-family: ATCArquette_Medium, Helvetica, Arial, sans-serif !important;
     }
 
     #id_icon_domain {
@@ -109,6 +110,7 @@
 
     #list_skills {
         font-weight: normal;
+        font-family: ATCArquette_Medium, Helvetica, Arial, sans-serif !important;
     }
 
     #list_skills::before {
@@ -122,6 +124,7 @@
     #id_subdomain {
         font-weight: bold;
         padding-top: 20px;
+        font-family: ATCArquette_Bold, Helvetica, Arial, sans-serif !important;
     }
 
     hr {
