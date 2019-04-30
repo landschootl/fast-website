@@ -58,7 +58,6 @@
                 if (this.$refs.form.validate()) {
                     this.$emit('next')
                     //ApiService.updateQuote();
-
                 }
             }
         }
