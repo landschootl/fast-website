@@ -95,6 +95,7 @@
 
     #id_layout {
         background-image: url("../assets/catalog_background.jpg");
+        background-size: cover;
     }
 
     #id_title {
