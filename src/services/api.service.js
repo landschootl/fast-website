@@ -3,7 +3,7 @@ import FormService from './form.service';
 export default {
 
     createQuote() {
-        fetch('http://localhost:8080/api/quotes', {
+        fetch('http://localhost:8080/api/v1/quotes', {
             method: 'POST',
             body: JSON.stringify(FormService.registration),
             headers: {
@@ -18,7 +18,7 @@ export default {
     },
 
     updateQuote() {
-        fetch(`http://localhost:8080/api/quotes/${FormService.registration.id}`, {
+        fetch(`http://localhost:8080/api/v1/quotes/${FormService.registration.id}`, {
             method: 'PUT',
             body: JSON.stringify(FormService.registration),
             headers: {
@@ -31,7 +31,7 @@ export default {
     },
 
     validateQuote() {
-        fetch(`http://localhost:8080/api/quotes/${FormService.registration.id}/validate`, {
+        fetch(`http://localhost:8080/api/v1/quotes/${FormService.registration.id}/validate`, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json",
