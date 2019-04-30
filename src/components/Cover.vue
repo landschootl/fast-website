@@ -1,7 +1,7 @@
 <template>
     <v-parallax
             :src="require('@/assets/cover.jpg')"
-            height="600">
+            id="cover">
         <v-layout column align-center justify-center class="white--text">
             <img src="../assets/logofast.png" alt="Vuetify.js" height="200">
             <h1 class="white--text mb-2 display-1 text-xs-center">{{title}}</h1>
@@ -25,5 +25,7 @@
 </script>
 
 <style scoped>
-
+    #cover {
+        height: calc(100vh - 56px) !important;
+    }
 </style>
