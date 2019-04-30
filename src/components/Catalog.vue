@@ -57,7 +57,6 @@
         },
         created() {
             /*DomainService.getAll().then((response) => {
-
                 this.domains = response;
             })*/
             this.domains = DomainService.getAll();
