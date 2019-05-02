@@ -3,8 +3,8 @@
     <v-layout column wrap class="my-1">
         <v-flex v-if="!showCheckbox" id="id_title" xs12 sm4 class="my-3">
             <div class="text-xs-center">
-                <h2 class="headline">FORMATIONS & AUDITS</h2>
-                <span class="subheading">
+                <h2 id="id_title_catalog" class="headline">FORMATIONS & AUDITS</h2>
+                <span id="id_subheading" class="subheading">
                     Un savoir-faire diversifié
                 </span>
             </div>
@@ -86,10 +86,19 @@
 </script>
 
 <style scoped>
+
+    #id_title_catalog {
+        font-family: ATCArquette_Medium, Helvetica, Arial, sans-serif !important;
+    }
+
+    #id_subheading {
+        font-family: ATCArquette_Light, Helvetica, Arial, sans-serif !important;
+    }
+
     #column {
         margin-top: -6.3%;
         padding-top: 7%;
-        padding-bottom: 0%;
+        padding-bottom: 5%;
     }
 
     #column:nth-child(odd) {
