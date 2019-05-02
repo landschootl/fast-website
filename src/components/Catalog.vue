@@ -1,6 +1,6 @@
 <template>
 
-    <v-layout column wrap class="my-1">
+    <v-layout id="id_layout" column wrap class="my-1">
         <v-flex v-if="!showCheckbox" id="id_title" xs12 sm4 class="my-3">
             <div class="text-xs-center">
                 <h2 class="headline">FORMATIONS & AUDITS</h2>
@@ -13,9 +13,9 @@
             <v-container id="id_container" grid-list-xl>
                 <v-layout  row wrap justify-center align-top>
                     <v-flex id="column" xs12 md3 v-for="(domain, index) in domains" :key="index">
-                        <v-card class="elevation-0 transparent">
+                        <v-card id="id_card" class="elevation-0 transparent">
                             <v-card-text v-if="!showCheckbox" class="text-xs-center">
-                                <v-icon x-large class="blue--text text--lighten-2">{{domain.icon}}</v-icon>
+                                <v-icon id="id_icon_domain" x-large>{{domain.icon}}</v-icon>
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
                                 <div id="id_domain" class="headline">{{domain.title}}</div>
@@ -89,7 +89,7 @@
     #column {
         margin-top: -6.3%;
         padding-top: 7%;
-        padding-bottom: 0%;
+        padding-bottom: 5%;
     }
 
     #column:nth-child(odd) {
