@@ -32,7 +32,7 @@
                     <v-list class="transparent">
                         <v-list-tile>
                             <v-list-tile-action>
-                                <v-icon class="blue--text text--lighten-2">phone</v-icon>
+                                <v-icon class="mulberry-dav">phone</v-icon>
                             </v-list-tile-action>
                             <v-list-tile-content>
                                 <v-list-tile-title>{{phone}}</v-list-tile-title>
@@ -40,7 +40,7 @@
                         </v-list-tile>
                         <v-list-tile>
                             <v-list-tile-action>
-                                <v-icon class="blue--text text--lighten-2">place</v-icon>
+                                <v-icon class="mulberry-dav">place</v-icon>
                             </v-list-tile-action>
                             <v-list-tile-content>
                                 <v-list-tile-title>{{place}}</v-list-tile-title>
@@ -48,7 +48,7 @@
                         </v-list-tile>
                         <v-list-tile>
                             <v-list-tile-action>
-                                <v-icon class="blue--text text--lighten-2">email</v-icon>
+                                <v-icon class="mulberry-dav">email</v-icon>
                             </v-list-tile-action>
                             <v-list-tile-content>
                                 <v-list-tile-title>{{email}}</v-list-tile-title>

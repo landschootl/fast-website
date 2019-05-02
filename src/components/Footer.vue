@@ -9,7 +9,7 @@
                 flat
                 tile
         >
-            <v-card-title class="teal">
+            <v-card-title class="bg-mulberry-dav">
                 <strong class="subheading">Venez nous rejoindre sur les réseaux sociaux !</strong>
 
                 <v-spacer></v-spacer>
@@ -53,15 +53,15 @@
                 {
                     link : 'https://twitter.com/DavidsonSINord?lang=fr',
                     icon : 'fab fa-twitter'
+                },
+                {
+                    link : 'https://www.instagram.com/davidson_consulting/',
+                    icon : 'fab fa-instagram'
                 }
             ]
         })
     }
 </script>
 <style scoped>
-
-    .teal {
-        background-image: linear-gradient(to right top, #69247f, #883389, #a54393, #c1569c, #dc69a6);
-    }
 
 </style>

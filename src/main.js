@@ -5,7 +5,6 @@ import Axios from 'axios';
 
 import './plugins/vuetify'
 import './plugins/vue-router'
-
 import Home from './components/Home'
 import Blog from "./components/Blog";
 
