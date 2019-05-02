@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <v-carousel  class="cara" dark hide-delimiters>
         <v-carousel-item height="100%" v-for="(testimony, index) in testimonies" :key="index">
 
@@ -14,6 +15,13 @@
             </v-responsive>
 
 
+=======
+    <v-carousel light hide-delimiters>
+        <v-carousel-item  v-for="(testimony, index) in testimonies" :key="index">
+            <div id="id_testimony_name">{{testimony.nom}}</div>
+            <div id="id_testimony_description">{{testimony.description}}</div>
+          <!--  <img id="id_background" :src="require('../assets/testimony_background.jpg')"/>-->
+>>>>>>> refactor(testimony): adding json in carousel
         </v-carousel-item>
     </v-carousel>
 </template>
@@ -40,6 +48,7 @@
 
 <style scoped>
 
+<<<<<<< HEAD
     .cara, .cara .v-window__container, .cara .v-carousel__item {
         height: 100%!important;
     }
@@ -62,6 +71,21 @@
     font-size: 100% !important;
     color: white;
     z-index: 2 !important;
+=======
+#id_background {
+    background-image: url("../assets/testimony_background.jpg");
+}
+
+id_testimony_name {
+    text-align: center;
+    margin: 0 auto !important;
+}
+
+id_testimony_description {
+    text-align: center;
+    margin: 0 auto !important;
+    font-size: 100%;
+>>>>>>> refactor(testimony): adding json in carousel
 }
 
 </style>
