@@ -27,7 +27,7 @@
 </script>
 <style lang="scss">
 
-  @import 'assets/charte-graphique-davidson.scss';
+  @import 'assets/davidson-graphic-charter';
 
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;

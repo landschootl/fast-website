@@ -22,7 +22,7 @@
                         dark
                         icon
                 >
-                    <v-icon size="24px">{{ link.icon }}</v-icon>
+                    <font-awesome-icon :icon="{prefix: 'fab', iconName: link.icon}" size="2x"/>
                 </v-btn>
             </v-card-title>
 
@@ -40,23 +40,23 @@
             links: [
                 {
                     link : 'https://www.facebook.com/Davidson.Consulting/',
-                    icon : 'fab fa-facebook'
+                    icon : "facebook"
                 },
                 {
                     link : 'https://fr.linkedin.com/company/davidson-consulting',
-                    icon : 'fab fa-linkedin'
+                    icon : "linkedin"
                 },
                 {
                     link : 'https://fr.viadeo.com/fr/company/davidson-consulting',
-                    icon : 'fab fa-viadeo'
+                    icon : "viadeo"
                 },
                 {
                     link : 'https://twitter.com/DavidsonSINord?lang=fr',
-                    icon : 'fab fa-twitter'
+                    icon : "twitter"
                 },
                 {
                     link : 'https://www.instagram.com/davidson_consulting/',
-                    icon : 'fab fa-instagram'
+                    icon : "instagram"
                 }
             ]
         })
