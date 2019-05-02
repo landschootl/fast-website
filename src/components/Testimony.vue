@@ -10,9 +10,23 @@
 </template>
 
 <script>
+    import TestimonyService from '../services/testimony.service';
+
     export default {
         name: "Testimony",
+
+        created() {
+            /*TestimonyService.getAllTestimony().then((response) => {
+                this.domains = response;
+            })*/
+            this.testimonies = TestimonyService.getAllTestimony();
+        },
+
+        data: () => ({
+            testimonies: []
+        })
     }
+
 </script>
 
 <style scoped>
