@@ -25,7 +25,7 @@
                                 <ul>
                                     <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
-                                            <li id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
+                                            <li font-weight="normal" id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
                                                 <input type="checkbox" id="checkbox" v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill">
                                                 {{skill.title}}
                                             </li>
@@ -113,10 +113,6 @@
         max-width: none !important;
     }
 
-    #list_skills {
-        font-weight: normal;
-    }
-
     #list_skills::before {
         content: "•";
         color: #15BFAB;
@@ -150,16 +146,6 @@
         padding: 0;
     }
     
-    .btn_continue {
-        right: 0px;
-        position: absolute;
-    }
-
-    .btn_continue {
-        right: 0px;
-        position: absolute;
-    }
-
     .btn_continue {
         right: 0px;
         position: absolute;
