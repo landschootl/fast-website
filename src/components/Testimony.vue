@@ -4,11 +4,15 @@
 
             <v-responsive dark height="100%" >
 
-
-                            <v-layout id="id_testimony_name">{{testimony.nom}}</v-layout>
-                            <v-layout id="id_testimony_description">{{testimony.description}}</v-layout>
-                            <img :src="require('../assets/testimony_background.jpg')" style="background-size: cover !important; display: block; z-index: 1 !important; position: relative;"/>
-
+                <v-img id="id_background" :src="require('@/assets/testimony_background.jpg')"/>
+                <v-layout
+                        align-center
+                        column
+                        justify-center
+                >
+                <blockquote class="blockquote text-xs-center near-white-dav" id="id_testimony_name">{{testimony.nom}}</blockquote>
+                <blockquote class="blockquote text-xs-center near-white-dav" id="id_testimony_description">{{testimony.description}}</blockquote>
+                </v-layout>
 
 
             </v-responsive>
@@ -42,26 +46,27 @@
 
     .cara, .cara .v-window__container, .cara .v-carousel__item {
         height: 100%!important;
+        position: relative;
     }
 
 #id_background {
-    background-image: url("../assets/testimony_background.jpg");
+    background-image: url("../assets/testimony_background.jpg") !important;
     background-size: cover;
 }
 
 #id_testimony_name {
+    position: absolute;
     text-align: center;
     margin: 0 auto !important;
     color: white;
-    z-index: 2 !important;
 }
 
 #id_testimony_description {
+    position: absolute;
     text-align: center;
     margin: 0 auto !important;
     font-size: 100% !important;
     color: white;
-    z-index: 2 !important;
 }
 
 </style>
