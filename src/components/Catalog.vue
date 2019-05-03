@@ -14,12 +14,12 @@
                     <v-flex id="column" xs12 md3 v-for="(domain, index) in domains" :key="index">
                         <v-card class="elevation-0 transparent">
                             <v-card-text v-if="!showCheckbox" class="text-xs-center">
-                                <v-icon id="id_icon_domain" x-large>{{domain.icon}}</v-icon>
+                                <v-icon class="turquoise-dav" x-large>{{domain.icon}}</v-icon>
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
-                                <div class="headline ATCArquette-Medium">{{domain.title}}</div>
+                                <div class="headline turquoise-dav ATCArquette-Medium">{{domain.title}}</div>
                             </v-card-title>
-                            <hr/>
+                            <hr width="30%" height="3px" class="near-black-dav"/>
                             <v-card-text>
                                 <form>
                                 <ul>
@@ -91,16 +91,8 @@
         background-color: rgba(238, 240, 239, 0.5);
     }
 
-    .headline {
-        color: #15BFAB;
-    }
-
-    #id_icon_domain {
-        color: #15BFAB !important;
-    }
-
     .my-1 {
-        background-image: url("../assets/catalog_background.jpg");
+        background-image: url("../assets/catalog_background.jpg") !important;
         background-size: cover;
     }
 
@@ -115,24 +107,20 @@
 
     #list_skills::before {
         content: "•";
-        color: #15BFAB;
+        color: #33CCCC;
         display: inline-block;
         width: 1em;
         margin-left: -2em;
     }
 
     #id_subdomain {
-        font-weight: bold;
         padding-top: 20px;
     }
 
     hr {
         display: block;
-        color: black;
-        width: 30%;
         margin-left: auto;
         margin-right: auto;
-        height: 3px;
         border-style: solid;
         border-width: 1.75px;
     }
