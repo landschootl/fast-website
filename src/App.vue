@@ -25,8 +25,10 @@
     }
   }
 </script>
+<style lang="scss">
 
-<style scoped>
+  @import 'assets/davidson-graphic-charter';
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
