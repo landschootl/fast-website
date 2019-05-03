@@ -92,3 +92,85 @@ $turquoise-dav : #33CCCC;
 .bg-turquoise-dav {
   background-color: $turquoise-dav;
 }
+
+/* Fonts ATCArquette */
+
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font('ATCArquette_Black', 'assets/fonts/ATCArquette-Black.ttf');
+@include font('ATCArquette_BlackItalic', 'assets/fonts/ATCArquette-BlackItalic.ttf');
+@include font('ATCArquette_Bold', 'assets/fonts/ATCArquette-Bold.ttf');
+@include font('ATCArquette_BoldItalic', 'assets/fonts/ATCArquette-BoldItalic.ttf');
+@include font('ATCArquette_Extralight', 'assets/fonts/ATCArquette-Extralight.ttf');
+@include font('ATCArquette_ExtralightItalic', 'assets/fonts/ATCArquette-ExtralightItalic.ttf');
+@include font('ATCArquette_Light', 'assets/fonts/ATCArquette-Light.ttf');
+@include font('ATCArquette_LightItalic', 'assets/fonts/ATCArquette-LightItalic.ttf');
+@include font('ATCArquette_Medium', 'assets/fonts/ATCArquette-Medium.ttf');
+@include font('ATCArquette_MediumItalic', 'assets/fonts/ATCArquette-MediumItalic.ttf');
+@include font('ATCArquette_Regular', 'assets/fonts/ATCArquette-Regular.ttf');
+@include font('ATCArquette_RegularItalic', 'assets/fonts/ATCArquette-RegularItalic.ttf');
+@include font('ATCArquette_Semibold', 'assets/fonts/ATCArquette-Semibold.ttf');
+@include font('ATCArquette_SemiboldItalic', 'assets/fonts/ATCArquette-SemiboldItalic.ttf');
+
+.ATCArquette-Black {
+  font-family: ATCArquette_Black, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-BlackItalic {
+  font-family: ATCArquette_BlackItalic, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-Bold {
+  font-family: ATCArquette_Bold, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-BoldItalic {
+  font-family: ATCArquette_BoldItalic, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-Extralight {
+  font-family: ATCArquette_Extralight, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-ExtralightItalic {
+  font-family: ATCArquette_ExtralightItalic, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-Light {
+  font-family: ATCArquette_Light, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-LightItalic {
+  font-family: ATCArquette_LightItalic, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-Medium {
+  font-family: ATCArquette_Medium, Helvetica, Arial, sans-serif !important;
+}
+
+.ATCArquette-MediumItalic {
+  font-family: ATCArquette_MediumItalic, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-Regular {
+  font-family: ATCArquette_Regular, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-RegularItalic {
+  font-family: ATCArquette_RegularItalic, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-Semibold {
+  font-family: ATCArquette_Semibold, Helvetica, Arial, sans-serif;
+}
+
+.ATCArquette-SemiboldItalic {
+  font-family: ATCArquette_SemiboldItalic, Helvetica, Arial, sans-serif;
+}
