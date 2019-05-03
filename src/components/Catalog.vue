@@ -2,8 +2,8 @@
     <v-layout column wrap class="my-1">
         <v-flex v-if="!showCheckbox" xs12 sm4 class="my-3">
             <div class="text-xs-center">
-                <h2 class="headline">FORMATIONS & AUDITS</h2>
-                <span class="subheading">
+                <h2 class="headline ATCArquette-Medium">FORMATIONS & AUDITS</h2>
+                <span class="subheading ATCArquette-Light">
                     Un savoir-faire diversifié
                 </span>
             </div>
@@ -17,15 +17,15 @@
                                 <v-icon id="id_icon_domain" x-large>{{domain.icon}}</v-icon>
                             </v-card-text>
                             <v-card-title primary-title class="layout justify-center">
-                                <div class="headline">{{domain.title}}</div>
+                                <div class="headline ATCArquette-Medium">{{domain.title}}</div>
                             </v-card-title>
                             <hr/>
                             <v-card-text>
                                 <form>
                                 <ul>
-                                    <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div id="id_subdomain">{{subdomain.title}}</div>
+                                    <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div class="ATCArquette-Bold" id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
-                                            <li font-weight="normal" id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
+                                            <li class="ATCArquette-Medium" id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
                                                 <input type="checkbox" id="checkbox" v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill">
                                                 {{skill.title}}
                                             </li>
