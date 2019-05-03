@@ -1,91 +1,54 @@
 <template>
-<<<<<<< HEAD
-    <v-carousel  class="cara" dark hide-delimiters>
-        <v-carousel-item height="100%" v-for="(testimony, index) in testimonies" :key="index">
-
-            <v-responsive dark height="100%" >
-
-
-                            <v-layout id="id_testimony_name">{{testimony.nom}}</v-layout>
-                            <v-layout id="id_testimony_description">{{testimony.description}}</v-layout>
-                            <img :src="require('../assets/testimony_background.jpg')" style="background-size: cover !important; display: block; z-index: 1 !important; position: relative;"/>
-
-
-
-            </v-responsive>
-
-
-=======
     <v-carousel light hide-delimiters>
-        <v-carousel-item  v-for="(testimony, index) in testimonies" :key="index">
-            <div id="id_testimony_name">{{testimony.nom}}</div>
-            <div id="id_testimony_description">{{testimony.description}}</div>
-          <!--  <img id="id_background" :src="require('../assets/testimony_background.jpg')"/>-->
->>>>>>> refactor(testimony): adding json in carousel
+        <v-carousel-item>
+            <img :src="require('../assets/testimony_background.jpg')" />
         </v-carousel-item>
-    </v-carousel>
+        <v-carousel-item>
+            <img :src="require('../assets/testimony_background.jpg')" />
+            <v-carousel  class="cara" dark hide-delimiters>
+                <v-carousel-item height="100%" v-for="(testimony, index) in testimonies" :key="index">
+                    <v-responsive dark height="100%" >
+                        <v-img id="id_background" :src="require('@/assets/testimony_background.jpg')"/>
+                        <v-layout align-center column justify-center class="header-text">
+                            <v-avatar :tile="false" :size="100">
+                                <v-img :src="testimony.image"/>
+                            </v-avatar>
+                            <v-flex  xs12 class="text-xs-center">
+                                <blockquote class="blockquote near-white-dav" id="id_testimony_name">{{testimony.nom}}</blockquote>
+                                <blockquote class="blockquote near-white-dav" id="id_testimony_description">{{testimony.description}}</blockquote>
+                            </v-flex>
+                        </v-layout>
+                    </v-responsive>
+                </v-carousel-item>
+            </v-carousel>
 </template>
 
 <script>
     import TestimonyService from '../services/testimony.service';
-
     export default {
         name: "Testimony",
-
         created() {
             /*TestimonyService.getAllTestimony().then((response) => {
                 this.domains = response;
             })*/
             this.testimonies = TestimonyService.getAllTestimony();
         },
-
         data: () => ({
             testimonies: []
         })
     }
-
 </script>
 
 <style scoped>
-
-<<<<<<< HEAD
-    .cara, .cara .v-window__container, .cara .v-carousel__item {
-        height: 100%!important;
+    .header-text {
+        position: absolute;
+        top: 20%;
+        left: auto;
+        right: auto;
+        width: 96.66666666666666%;
     }
-
-#id_background {
-    background-image: url("../assets/testimony_background.jpg");
-    background-size: cover;
-}
-
-#id_testimony_name {
-    text-align: center;
-    margin: 0 auto !important;
-    color: white;
-    z-index: 2 !important;
-}
-
-#id_testimony_description {
-    text-align: center;
-    margin: 0 auto !important;
-    font-size: 100% !important;
-    color: white;
-    z-index: 2 !important;
-=======
-#id_background {
-    background-image: url("../assets/testimony_background.jpg");
-}
-
-id_testimony_name {
-    text-align: center;
-    margin: 0 auto !important;
-}
-
-id_testimony_description {
-    text-align: center;
-    margin: 0 auto !important;
-    font-size: 100%;
->>>>>>> refactor(testimony): adding json in carousel
-}
+    #id_testimony_name {
+        font-size: 200%;
+    }
 
 </style>
