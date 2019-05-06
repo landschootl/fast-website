@@ -1,28 +1,24 @@
 <template>
     <v-carousel  class="cara" dark hide-delimiters>
         <v-carousel-item height="100%" v-for="(testimony, index) in testimonies" :key="index">
-
             <v-responsive dark height="100%" >
-
               <v-img id="id_background" :src="require('@/assets/testimony_background.jpg')"/>
                 <v-layout align-center column justify-center class="header-text">
-                    <v-avatar :tile="false" :size="100"><v-img v-bind:src="image"/></v-avatar>
+                    <v-avatar :tile="false" :size="100">
+                        <v-img :src="testimony.image"/>
+                    </v-avatar>
                     <v-flex  xs12 class="text-xs-center">
-                <blockquote class="blockquote near-white-dav" id="id_testimony_name">{{testimony.nom}}</blockquote>
-                <blockquote class="blockquote near-white-dav" id="id_testimony_description">{{testimony.description}}</blockquote>
+                        <blockquote class="blockquote near-white-dav" id="id_testimony_name">{{testimony.nom}}</blockquote>
+                        <blockquote class="blockquote near-white-dav" id="id_testimony_description">{{testimony.description}}</blockquote>
                     </v-flex>
                 </v-layout>
-
             </v-responsive>
-
-
         </v-carousel-item>
     </v-carousel>
 </template>
 
 <script>
     import TestimonyService from '../services/testimony.service';
-
     export default {
         name: "Testimony",
 
@@ -34,9 +30,7 @@
         },
 
         data: () => ({
-            testimonies: [],
-            image : require("@/assets/photo_profil.png")
-
+            testimonies: []
         })
     }
 
@@ -50,18 +44,7 @@
         left: auto;
         right: auto;
         width: 96.66666666666666%;
-        color: #fff;
     }
-
-    .cara, .cara .v-window__container, .cara .v-carousel__item {
-        height: 100%!important;
-        position: relative;
-    }
-
-#id_background {
-    background-image: url("../assets/testimony_background.jpg") !important;
-    background-size: cover;
-}
 
 #id_testimony_name {
     font-size: 200%;
