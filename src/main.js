@@ -5,16 +5,9 @@ import Axios from 'axios';
 
 import './plugins/vuetify'
 import './plugins/vue-router'
+import './plugins/font-awesome'
 import Home from './components/Home'
 import Blog from "./components/Blog";
-
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faFacebook, faTwitter, faInstagram, faLinkedin, faViadeo } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-library.add(faFacebook, faTwitter, faInstagram, faLinkedin, faViadeo)
-
-Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 

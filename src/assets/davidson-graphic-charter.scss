@@ -12,6 +12,9 @@ $mulberry-dav : #B62181;
 $bubblegum-dav : #F18FBA;
 $turquoise-dav : #33CCCC;
 
+$theme-purple-dav : linear-gradient(to right top, #130e3a, #1c1740, #252047, #2d2a4d, #363353, #403d5b, #494762, #53516a, #605e76, #6d6c81, #7b7a8d, #898899);
+$theme-accentuate-dav : linear-gradient(to right top, #45277f, #5d2782, #742584, #892485, #9d2284, #ab2d87, #b9388b, #c6438e, #d15798, #dc6aa3, #e77dae, #f18fba);
+
 .near-black-dav {
   color: $near-black-dav;
 }
@@ -91,6 +94,14 @@ $turquoise-dav : #33CCCC;
 
 .bg-turquoise-dav {
   background-color: $turquoise-dav;
+}
+
+.bg-theme-purple-dav {
+  background-image: $theme-purple-dav;
+}
+
+.bg-theme-accentuate-dav {
+  background-image: $theme-accentuate-dav;
 }
 
 /* Fonts ATCArquette */

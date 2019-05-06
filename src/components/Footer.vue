@@ -9,7 +9,7 @@
                 flat
                 tile
         >
-            <v-card-title class="bg-mulberry-dav">
+            <v-card-title class="bg-theme-accentuate-dav">
                 <strong class="subheading">Venez nous rejoindre sur les réseaux sociaux !</strong>
 
                 <v-spacer></v-spacer>
