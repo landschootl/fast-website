@@ -56,7 +56,7 @@ $theme-accentuate-dav : linear-gradient(to right top, #45277f, #5d2782, #742584,
 }
 
 .near-white-dav {
-  color: $near-white-dav;
+  color: $near-white-dav !important;
 }
 
 .bg-near-white-dav {
@@ -89,7 +89,7 @@ $theme-accentuate-dav : linear-gradient(to right top, #45277f, #5d2782, #742584,
 }
 
 .turquoise-dav {
-  color: $turquoise-dav;
+  color: $turquoise-dav !important;
 }
 
 .bg-turquoise-dav {
