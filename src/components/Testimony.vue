@@ -4,16 +4,14 @@
 
             <v-responsive dark height="100%" >
 
-                <v-img id="id_background" :src="require('@/assets/testimony_background.jpg')"/>
-                <v-layout
-                        align-center
-                        column
-                        justify-center
-                >
-                <blockquote class="blockquote text-xs-center near-white-dav" id="id_testimony_name">{{testimony.nom}}</blockquote>
-                <blockquote class="blockquote text-xs-center near-white-dav" id="id_testimony_description">{{testimony.description}}</blockquote>
+              <v-img id="id_background" :src="require('@/assets/testimony_background.jpg')"/>
+                <v-layout align-center column justify-center class="header-text">
+                    <v-avatar :tile="false" :size="100"><v-img v-bind:src="image"/></v-avatar>
+                    <v-flex  xs12 class="text-xs-center">
+                <blockquote class="blockquote near-white-dav" id="id_testimony_name">{{testimony.nom}}</blockquote>
+                <blockquote class="blockquote near-white-dav" id="id_testimony_description">{{testimony.description}}</blockquote>
+                    </v-flex>
                 </v-layout>
-
 
             </v-responsive>
 
@@ -36,13 +34,24 @@
         },
 
         data: () => ({
-            testimonies: []
+            testimonies: [],
+            image : require("@/assets/photo_profil.png")
+
         })
     }
 
 </script>
 
 <style scoped>
+
+    .header-text {
+        position: absolute;
+        top: 20%;
+        left: auto;
+        right: auto;
+        width: 96.66666666666666%;
+        color: #fff;
+    }
 
     .cara, .cara .v-window__container, .cara .v-carousel__item {
         height: 100%!important;
@@ -55,18 +64,7 @@
 }
 
 #id_testimony_name {
-    position: absolute;
-    text-align: center;
-    margin: 0 auto !important;
-    color: white;
-}
-
-#id_testimony_description {
-    position: absolute;
-    text-align: center;
-    margin: 0 auto !important;
-    font-size: 100% !important;
-    color: white;
+    font-size: 200%;
 }
 
 </style>
