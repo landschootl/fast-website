@@ -5,6 +5,9 @@
         <Cover/>
       </section>
       <section>
+        <PreviewBlog></PreviewBlog>
+      </section>
+      <section>
         <Catalog
           v-bind:showCheckbox="false">
         </Catalog>
@@ -28,6 +31,7 @@
     import Contact from "./Contact";
     import Testimony from "./Testimony";
     import Relation from "./Relation";
+    import PreviewBlog from './PreviewBlog';
 
     export default {
         name: "Home",
@@ -36,7 +40,8 @@
           Catalog,
           Relation,
           Testimony,
-          Contact
+          Contact,
+          PreviewBlog
         },
         data: () => ({
 
