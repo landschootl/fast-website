@@ -34,21 +34,26 @@
             this.testimonies = TestimonyService.getAllTestimony();
         },
         data: () => ({
-            testimonies: []
+            testimonies: [],
+            image : require("@/assets/photo_profil.png")
+
         })
     }
 </script>
 
 <style scoped>
+
     .header-text {
         position: absolute;
         top: 20%;
         left: auto;
         right: auto;
         width: 96.66666666666666%;
+
     }
     #id_testimony_name {
         font-size: 200%;
     }
+
 
 </style>
