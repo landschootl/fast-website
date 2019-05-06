@@ -21,6 +21,8 @@
                     </v-responsive>
                 </v-carousel-item>
             </v-carousel>
+        </v-carousel-item>
+    </v-carousel>
 </template>
 
 <script>
@@ -34,9 +36,7 @@
             this.testimonies = TestimonyService.getAllTestimony();
         },
         data: () => ({
-            testimonies: [],
-            image : require("@/assets/photo_profil.png")
-
+            testimonies: []
         })
     }
 </script>
@@ -49,8 +49,8 @@
         left: auto;
         right: auto;
         width: 96.66666666666666%;
-
     }
+
     #id_testimony_name {
         font-size: 200%;
     }
