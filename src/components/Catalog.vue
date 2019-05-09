@@ -107,12 +107,10 @@
     }
 
     #list_skills::before {
-        @include
+        @include turquoise-dav();
         content: "•";
-        color: #33CCCC;
         display: inline-block;
         width: 1em;
-
     }
 
     #list_skills {
