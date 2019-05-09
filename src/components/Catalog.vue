@@ -107,6 +107,7 @@
     }
 
     #list_skills::before {
+        @include
         content: "•";
         color: #33CCCC;
         display: inline-block;
