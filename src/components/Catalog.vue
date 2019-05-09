@@ -80,7 +80,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     #column {
         margin-top: -6%;
         padding-top: 7%;
@@ -107,8 +107,8 @@
     }
 
     #list_skills::before {
-        @include turquoise-dav();
         content: "•";
+        color: #33CCCC;
         display: inline-block;
         width: 1em;
     }
@@ -131,7 +131,7 @@
 
     ul {
         list-style: none;
-        padding: 0px ;
+        padding-inline-start: 0px;
     }
 
     #checkbox {

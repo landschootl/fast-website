@@ -102,11 +102,6 @@ $theme-accentuate-dav : linear-gradient(to right top, #45277f, #5d2782, #742584,
 
 .bg-theme-accentuate-dav {
   background-image: $theme-accentuate-dav;
-
-}
-
-@mixin turquoise-dav() {
-  color: $turquoise-dav !important;
 }
 
 /* Fonts ATCArquette */
