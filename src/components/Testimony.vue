@@ -39,7 +39,7 @@
         top: 40%;
         left: auto;
         right: auto;
-        width: 96.66666666666666%;
+        width: 97%;
     }
 
     .header-image {
@@ -47,7 +47,7 @@
         top: 15%;
         left: auto;
         right: auto;
-        width: 96.66666666666666%;
+        width: 97%;
     }
 
     #id_testimony_name {
