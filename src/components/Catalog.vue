@@ -1,6 +1,6 @@
 <template>
-    <v-layout column wrap class="my-1">
-        <v-flex v-if="!showCheckbox" xs12 sm4 class="my-3">
+    <v-layout column wrap class="my-1 layout_global">
+        <v-flex v-if="!showCheckbox" xs12 sm4 class="my-3 flex_title">
             <div class="text-xs-center">
                 <h2 class="headline ATCArquette-Medium">FORMATIONS & AUDITS</h2>
                 <span class="subheading ATCArquette-Light">
@@ -25,7 +25,7 @@
                                 <ul>
                                     <li v-for="(subdomain, index) in domain.subdomains" :key="index"> <div class="ATCArquette-Bold" id="id_subdomain">{{subdomain.title}}</div>
                                         <ul>
-                                            <li class="ATCArquette-Medium" id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
+                                            <li class="ATCArquette-Medium near-black-dav" id="list_skills" v-for="(skill, index) in subdomain.skills" :key="index">
                                                 <input type="checkbox" id="checkbox" v-if="showCheckbox" v-model="registration.skills" v-bind:value="skill">
                                                 {{skill.title}}
                                             </li>
@@ -82,7 +82,7 @@
 
 <style scoped>
     #column {
-        margin-top: -6.3%;
+        margin-top: -6%;
         padding-top: 7%;
         padding-bottom: 5%;
     }
@@ -91,12 +91,13 @@
         background-color: rgba(238, 240, 239, 0.5);
     }
 
-    .my-1 {
+    .layout_global {
         background-image: url("../assets/catalog_background.jpg") !important;
         background-size: cover;
+        overflow: hidden;
     }
 
-    .my-3 {
+    .flex_title {
         z-index: 3;
     }
 
@@ -110,7 +111,11 @@
         color: #33CCCC;
         display: inline-block;
         width: 1em;
-        margin-left: -2em;
+
+    }
+
+    #list_skills {
+        list-style-position: outside;
     }
 
     #id_subdomain {
@@ -127,6 +132,7 @@
 
     ul {
         list-style: none;
+        padding: 0px ;
     }
 
     #checkbox {
