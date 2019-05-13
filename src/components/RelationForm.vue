@@ -1,7 +1,7 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
         <v-dialog v-model="dialog" persistent max-width="900px">
                 <template v-slot:activator="{ on }">
-                    <v-btn class="bg-mulberry-dav mt-5" dark large v-on="on">Demander un devis</v-btn>
+                    <v-btn class="bg-turquoise-dav mt-5" dark large v-on="on">Demander un devis</v-btn>
                 </template>
                 <v-card>
                     <v-btn icon id="btn_clear" @click="dialog = false">
