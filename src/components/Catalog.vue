@@ -10,7 +10,7 @@
         </v-flex>
         <v-flex xs12>
             <v-container id="id_container" grid-list-xl>
-                <v-layout  row wrap justify-center align-top class="id_layout">
+                <v-layout  row wrap justify-center align-top>
                     <v-flex id="column" xs12 md3 v-for="(domain, index) in domains" :key="index">
                         <v-card class="elevation-0 transparent">
                             <v-card-text v-if="!showCheckbox" class="text-xs-center">
@@ -81,14 +81,8 @@
 </script>
 
 <style scoped lang="scss">
-
-    .id_layout {
-        padding: 0% !important;
-    }
-
-
     #column {
-        
+        margin-top: -6%;
         padding-top: 7%;
         padding-bottom: 5%;
     }
