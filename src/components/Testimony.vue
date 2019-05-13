@@ -45,12 +45,10 @@
     .header-image {
         position: absolute;
         top: 15%;
-        left: auto;
-        right: auto;
         width: 97%;
     }
 
     #id_testimony_name {
-        font-size: 200%;
+        font-size: 2em;
     }
 </style>
