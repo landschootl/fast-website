@@ -7,7 +7,7 @@
             <h1 class="white--text mb-2 display-1 text-xs-center">{{title}}</h1>
             <div class="subheading mb-3 text-xs-center">
                 <span>{{description}}</span><br>
-                <span class="cyan--text">{{sub_description}}</span>
+                <span class="turquoise-dav">{{sub_description}}</span>
             </div>
         </v-layout>
     </v-parallax>
