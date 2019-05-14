@@ -1,18 +1,13 @@
 <template>
     <v-carousel dark hide-delimiters>
-        <v-carousel-item height="100%" v-for="(testimony, index) in testimonies" :key="index">
-            <v-responsive dark height="100%" >
-                <v-img id="id_background" :src="require('@/assets/testimony_background.jpg')"/>
-                <v-layout align-center column justify-center>
-                    <v-avatar :tile="false" :size="100" class="header-image">
-                        <v-img :src="testimony.image"/>
-                    </v-avatar>
-                    <v-flex  xs12 class="text-xs-center header-text">
-                        <blockquote class="blockquote near-white-dav" id="id_testimony_name">{{testimony.nom}}</blockquote>
-                        <blockquote class="blockquote near-white-dav">{{testimony.description}}</blockquote>
-                    </v-flex>
-                </v-layout>
-            </v-responsive>
+        <v-carousel-item height="100%" :src="require('../assets/testimony_background.jpg')" v-for="(testimony, index) in testimonies" :key="index">
+            <v-layout align-center justify-center column fill-height>
+                <v-avatar :tile="false" :size="90">
+                    <v-img :src="testimony.image"/>
+                </v-avatar>
+                <blockquote class="blockquote near-white-dav" id="id_testimony_name">{{testimony.nom}}</blockquote>
+                <blockquote class="blockquote near-white-dav">{{testimony.description}}</blockquote>
+            </v-layout>
         </v-carousel-item>
     </v-carousel>
 </template>
@@ -34,20 +29,6 @@
 </script>
 
 <style scoped>
-    .header-text {
-        position: absolute;
-        top: 40%;
-        left: auto;
-        right: auto;
-        width: 97%;
-    }
-
-    .header-image {
-        position: absolute;
-        top: 15%;
-        width: 97%;
-    }
-
     #id_testimony_name {
         font-size: 2em;
     }

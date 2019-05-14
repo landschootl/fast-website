@@ -1,6 +1,6 @@
 <template>
     <v-layout column wrap class="my-1">
-        <v-flex v-if="!showCheckbox" xs12 sm4 class="my-3">
+        <v-flex xs12 sm4 class="my-3">
             <div class="text-xs-center">
                 <h2 class="headline ATCArquette-Medium turquoise-dav">BLOG</h2>
                 <span class="subheading ATCArquette-Light">
