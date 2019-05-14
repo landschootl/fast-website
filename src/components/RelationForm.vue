@@ -36,9 +36,6 @@
                             </v-stepper-items>
                         </v-stepper>
                     </v-card-text>
-                    <v-card-actions>
-                        <v-spacer></v-spacer>
-                    </v-card-actions>
                 </v-card>
             </v-dialog>
 </template>

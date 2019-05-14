@@ -96,6 +96,10 @@ $theme-accentuate-dav : linear-gradient(to right top, #45277f, #5d2782, #742584,
   background-color: $turquoise-dav !important;
 }
 
+.bef-turquoise-dav::before {
+  color: $turquoise-dav !important;
+}
+
 .bg-theme-purple-dav {
   background-image: $theme-purple-dav;
 }
