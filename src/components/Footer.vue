@@ -9,7 +9,7 @@
                 flat
                 tile
         >
-            <v-card-title class="bg-theme-accentuate-dav">
+            <v-card-title class="bg-turquoise-dav">
                 <strong class="subheading">Venez nous rejoindre sur les réseaux sociaux !</strong>
 
                 <v-spacer></v-spacer>
